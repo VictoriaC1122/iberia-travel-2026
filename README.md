@@ -13,7 +13,7 @@ Andy 的完整月行程與 Victoria 的葡萄牙＋巴塞隆納行程，提供�
 
 ## GitHub Pages
 
-這是純靜態網站，不需安裝套件或建置。將此目錄中的檔案放在儲存庫根目錄，於 **Settings → Pages → Build and deployment** 選擇 **Deploy from a branch**，再選擇 `main` 分支與 `/ (root)`。
+這是純靜態網站，不需安裝套件或建置。將此目錄中的檔案放在儲存庫根目錄，於 **Settings → Pages → Build and deployment** 選擇 **Deploy from a branch**，再選擇 `codex/github-pages` 分支與 `/ (root)`。
 
 發布後，兩份手冊分別位於 `victoria.html` 與 `andy.html`。資源與頁面連結均使用相對路徑，可部署於 GitHub Pages 的專案子路徑。
 
