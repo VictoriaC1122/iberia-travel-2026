@@ -7,6 +7,7 @@ Andy 的完整月行程與 Victoria 的葡萄牙＋巴塞隆納行程，提供�
 - `andy.html`：Andy 手冊
 - `data.js`：行程、交通、航班與門票資料
 - `app.js`、`style.css`：互動與版面
+- `typography.css`：思源宋體標題與內文、思源黑體導覽及數字資訊
 - `locales.js`、`preferences.js`：四語翻譯、日期與數字格式、語言偏好
 - `currency.js`、`rates.js`：台幣／美元／歐元換算與參考匯率備援
 - `assets/`：城市照片與授權資訊，部署時需一併上傳

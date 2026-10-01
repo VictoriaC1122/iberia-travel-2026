@@ -1,0 +1,57 @@
+/* Typography matches the serif reading style of the 25–26 activities archive. */
+:root{
+ --font-serif:'Noto Serif TC','Songti TC',STSong,serif;
+ --font-sans:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
+ --font:var(--font-serif);
+}
+body{font-family:var(--font-serif);font-weight:400;line-height:1.85;letter-spacing:.008em}
+h1,h2,h3{font-family:var(--font-serif);font-weight:600;letter-spacing:-.018em}
+.masthead h1,
+body[data-page="overview"] .masthead h1,
+body:not([data-page="overview"]) .masthead h1{
+ font-family:var(--font-serif);font-weight:600;letter-spacing:-.025em;line-height:1.3;
+}
+.masthead .cover-owner{font-family:var(--font-serif);font-weight:400;letter-spacing:.008em;line-height:1.85}
+.section-head h2,.calendar-intro h2,.route h3,.trip-summary h3,
+.card h3,.day-card h3,.calendar-period h3,.airfare-heading h3{
+ font-family:var(--font-serif);font-weight:600;letter-spacing:-.018em;line-height:1.45;
+}
+.timeline li>div,.card p,.card ul,.day-note,.notice p,.trip-summary p,.route p{
+ font-family:var(--font-serif);font-size:1rem;font-weight:400;line-height:1.85;letter-spacing:.008em;
+}
+.wordmark,.wordmark span,.person-links,.preferences,nav,.button,
+button,input,select,textarea,.day-controls,.eyebrow,.chapter-name,.summary-label,
+.route-action,.pill,.text-link,.date-label,.date-list,.mobile-date-jump,
+.day-stamp,.timeline time,.city,.caption,.trip-summary dl,.flight-top,.flight-route,
+.stay-meta,.route-num,.route small,#trip-dates,.day-number,
+.calendar-kicker,.calendar-month-head,.calendar-weekdays,.calendar-number,
+.calendar-day-note,.calendar-band,.calendar-flight,.calendar-legend,
+.calendar-total,.period-dates,.period-count,.calendar-count-note,
+.airfare-kicker,.airfare-heading>p,.airfare-amounts,
+.currency-inputs,.currency-code,.currency-result-note,.currency-rate-meta,
+.rate-dates,.currency-source,.currency-disclaimer,footer{
+ font-family:var(--font-sans);
+}
+.preferences select,.currency-panel select,.currency-panel input,
+.currency-rate-meta button,.mobile-date-jump select{
+ font-family:var(--font-sans);
+}
+.wordmark{font-weight:600;letter-spacing:.008em}
+.wordmark span{font-weight:400;letter-spacing:.06em}
+nav a,.person-links a{font-weight:500;letter-spacing:.008em}
+nav a[aria-current]{font-weight:600}
+.chapter-name,.summary-label,.masthead .eyebrow{font-weight:500;letter-spacing:.12em}
+.calendar-month-head h3{font-family:var(--font-sans);font-weight:500;letter-spacing:.008em}
+.currency-result h3{font-family:var(--font-sans);font-weight:400;letter-spacing:.008em}
+.currency-result output,.airfare-amounts dd,.flight-route b{
+ font-family:var(--font-sans);font-variant-numeric:tabular-nums lining-nums;letter-spacing:0;
+}
+.card p.strong,.card p.caption{font-family:var(--font-sans)}
+.timeline time,.day-stamp,.flight-route b,.flight-top,.route-num,.route small,
+.stay-meta,.date-list,.mobile-date-jump select,#trip-dates,.calendar-total,
+.calendar-number,.period-dates,.period-count{font-variant-numeric:tabular-nums lining-nums;letter-spacing:0}
+@media(max-width:700px){
+ .timeline li>div,.card p,.card ul,.day-note,.notice p,.trip-summary p,.route p{line-height:1.8}
+ .day-card h3,.card h3{line-height:1.5}
+ .section-head h2,.calendar-intro h2{line-height:1.45}
+}

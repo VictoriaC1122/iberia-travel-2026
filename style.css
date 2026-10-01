@@ -324,7 +324,7 @@ nav a[aria-current]{background:#1b5a51;box-shadow:none}
 @media(prefers-reduced-motion:reduce){.route{transition:none}.route:hover{transform:none}}
 @media print{.masthead-text::before,.day-photo,.route-photo{display:none}.masthead,.masthead-text{background:#fff;color:var(--ink)}.masthead .cover-owner,.masthead #trip-dates{color:var(--ink)}}
 
-/* Travel journal typography: one family, quiet headings, generous reading rhythm. */
+/* Base text sizing and reading rhythm; typefaces are set in typography.css. */
 body{font-kerning:normal;line-break:strict;word-break:normal;letter-spacing:.005em}
 button,input,select,textarea{font-family:var(--font);letter-spacing:inherit}
 h1,h2,h3{font-family:var(--font);font-kerning:normal;word-break:normal}
