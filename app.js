@@ -103,7 +103,8 @@ function renderShell(){
  document.getElementById('preferences').innerHTML=`<label for="language-select">${esc(t('language'))}<select id="language-select">${Object.entries(LANGUAGES).map(([code,label])=>`<option value="${code}" ${code===lang?'selected':''}>${label}</option>`).join('')}</select></label><a class="currency-shortcut" href="${pageUrl('currency')}"><span>${esc(t('currencyShort'))}</span><small>TWD · USD · EUR</small></a>`;
  const nav=document.getElementById('nav');nav.setAttribute('aria-label',t('navigation'));nav.innerHTML=Object.entries(tabs).map(([k,v])=>`<a href="${pageUrl(k)}" ${page===k?'aria-current="page"':''}>${esc(v)}</a>`).join('');
  document.getElementById('main').innerHTML=({overview,days:itinerary,flights,transport,tickets,stays,notes,currency:currencyView}[page])();
- document.getElementById('footer-info').innerHTML=`${esc(t('footerTitle',{name}))}<br>${esc(t('updated',{date:fullDate('2026-10-02')}))}<br><a id="other" class="text-link" href="${pageUrl('overview','',shortTrip?'andy.html':'victoria.html')}">${esc(t('otherHandbook',{name:shortTrip?'Andy':'Victoria'}))}</a>`;
+ document.getElementById('footer-info').innerHTML=`${esc(t('footerTitle',{name}))}<br>${esc(t('updated',{date:fullDate('2026-10-02')}))}`;
+ if(!shortTrip)document.getElementById('footer-info').innerHTML+=`<br><a id="other" class="text-link" href="${pageUrl('overview','','victoria.html')}">${esc(t('otherHandbook',{name:'Victoria'}))}</a>`;
  document.querySelector('.credits summary').textContent=t('photoCredits');
  document.getElementById('credit-sagrada').textContent=t('sagrada')+': ';
  document.getElementById('credit-lisbon').textContent=t('lisbon')+': ';
