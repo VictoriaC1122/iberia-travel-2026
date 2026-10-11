@@ -44,7 +44,7 @@ const HANDBOOK_LOCALES = {
       "soloTrip": "11/10–11/24 為 Andy 的西班牙中南部旅程。",
       "pendingPlans": "待安排",
       "returnLisbonTitle": "11/08 · Victoria 回里斯本",
-      "returnLisbonNote": "11/09 11:05 里斯本起飛。波多回里斯本的車票、當晚住宿待訂。",
+      "returnLisbonNote": "Victoria 11/08 回里斯本火車已訂：18:40 Porto Campanhã → 21:22 Lisboa Oriente，Alfa Pendular 134。當晚住宿與抵達後接駁待安排；11/09 11:05 里斯本起飛。",
       "gaudiTitle": "11/26 · 高第建築日",
       "gaudiNote": "聖家堂待訂；14:30 登塔與聖保羅醫院時間重疊。",
       "staysTickets": "住宿與票券",
@@ -55,7 +55,6 @@ const HANDBOOK_LOCALES = {
       "localTimes": "皆為當地時間。",
       "intercity": "城際交通",
       "portoLisbon": "波多 → 里斯本",
-      "trainPending": "車次待訂。11/09 11:05 里斯本起飛。",
       "stationMap": "出發站地圖",
       "localTransfers": "機場與市區接駁",
       "lisbonPorto": "里斯本與波多",
@@ -143,7 +142,8 @@ const HANDBOOK_LOCALES = {
       "staySource": "依 2026/10/12 提供的訂單截圖更新。金額為整筆訂單，非每人費用。",
       "people": "入住旅客",
       "staysTicketsNoteShort": "里斯本 11/02–11/07、波多 11/07–11/08 住宿已確認。Victoria 11/08 住宿待重新安排；其餘旅館與票券待確認。",
-      "staysTicketsNoteFull": "里斯本 11/02–11/07、波多 11/07–11/08 住宿已確認。Andy 11/08–11/10 波多住宿及其餘旅館與票券待確認。"
+      "staysTicketsNoteFull": "里斯本 11/02–11/07、波多 11/07–11/08 住宿已確認。Andy 11/08–11/10 波多住宿及其餘旅館與票券待確認。",
+      "trainReturnNote": "11/08 Alfa Pendular 134 已訂，18:40 Porto Campanhã → 21:22 Lisboa Oriente。僅 Victoria；抵達後接駁與當晚住宿待安排。"
     },
     "shortDays": [
       [
@@ -192,8 +192,8 @@ const HANDBOOK_LOCALES = {
         "11-08",
         "波多／里斯本",
         "波多 → 里斯本",
-        "上午 波多行程依返里斯本交通調整|待安排 波多至里斯本|待確認 里斯本住宿與隔日機場交通",
-        "11/09 11:05 里斯本起飛。波多回里斯本交通、11/08 住宿待訂。 僅 Victoria：原 Meliá Lisboa Aeroporto 訂單已取消，今晚住宿待重新安排。"
+        "上午 波多行程依返里斯本交通調整|18:40 Porto Campanhã 出發，Alfa Pendular 134|21:22 抵達 Lisboa Oriente|抵達後 里斯本住宿接駁與隔日機場交通待安排",
+        "Victoria 的 Alfa Pendular 134 火車已訂，18:40–21:22。11/09 11:05 里斯本起飛。原 Meliá Lisboa Aeroporto 訂單已取消，今晚住宿與接駁待重新安排。"
       ],
       [
         "11-09",
@@ -528,7 +528,7 @@ const HANDBOOK_LOCALES = {
         "Porto",
         "Ribeira waterfront and Vila Nova de Gaia",
         "09:00 Clérigos Church and Tower|11:00 Praça da Liberdade and McDonald's Imperial|12:30 Lunch|14:00 Ribeira waterfront|15:30 Dom Luís I Bridge|16:30 Vila Nova de Gaia; wine cellar still to be chosen|Evening Bridge views after dark and dinner",
-        "Victoria flies from Lisbon at 11:05 the next day; Porto → Lisbon transport still needs to be confirmed. Porto accommodation for 8–10 November remains unconfirmed."
+        "Victoria takes the booked Alfa Pendular 134 on 8 November, 18:40 Porto Campanhã → 21:22 Lisboa Oriente, before her 11:05 flight from Lisbon the next day. Andy stays in Porto; accommodation for 8–10 November remains unconfirmed."
       ],
       [
         "11-09",
@@ -722,6 +722,14 @@ const HANDBOOK_LOCALES = {
         "09:30–12:43 · IC",
         "Booked",
         "Andy, Victoria"
+      ],
+      [
+        "11/08",
+        "Porto → Lisbon",
+        "Porto Campanhã → Lisboa Oriente",
+        "18:40–21:22 · Alfa Pendular 134",
+        "Booked",
+        "Victoria"
       ],
       [
         "11/12",
@@ -1025,7 +1033,7 @@ const HANDBOOK_LOCALES = {
       "soloTrip": "November 10–24 is Andy's trip through central and southern Spain.",
       "pendingPlans": "Plans to arrange",
       "returnLisbonTitle": "November 8 · Victoria returns to Lisbon",
-      "returnLisbonNote": "Flight departs Lisbon on November 9 at 11:05. The Porto–Lisbon ticket and accommodation for the night before are still to be booked.",
+      "returnLisbonNote": "Victoria’s train to Lisbon on 8 November is booked: 18:40 Porto Campanhã → 21:22 Lisboa Oriente, Alfa Pendular 134. Accommodation and the transfer after arrival remain to be arranged; her flight leaves Lisbon on 9 November at 11:05.",
       "gaudiTitle": "November 26 · Gaudí architecture day",
       "gaudiNote": "Sagrada Família tickets still to be booked; the 14:30 tower visit overlaps with Sant Pau.",
       "staysTickets": "Accommodation and tickets",
@@ -1036,7 +1044,6 @@ const HANDBOOK_LOCALES = {
       "localTimes": "All times are local.",
       "intercity": "Intercity transport",
       "portoLisbon": "Porto → Lisbon",
-      "trainPending": "Train still to be booked. Flight departs Lisbon on November 9 at 11:05.",
       "stationMap": "Departure station map",
       "localTransfers": "Airport and local transfers",
       "lisbonPorto": "Lisbon and Porto",
@@ -1124,7 +1131,8 @@ const HANDBOOK_LOCALES = {
       "staySource": "Updated from the booking screenshot provided on 12 October 2026. Amounts are per booking, not per person.",
       "people": "Guests",
       "staysTicketsNoteShort": "Lisbon, 2–7 November, and Porto, 7–8 November, are confirmed. Victoria’s 8 November stay needs to be rearranged; remaining hotels and tickets still need confirmation.",
-      "staysTicketsNoteFull": "Lisbon, 2–7 November, and Porto, 7–8 November, are confirmed. Andy’s Porto stay for 8–10 November and remaining hotels and tickets still need confirmation."
+      "staysTicketsNoteFull": "Lisbon, 2–7 November, and Porto, 7–8 November, are confirmed. Andy’s Porto stay for 8–10 November and remaining hotels and tickets still need confirmation.",
+      "trainReturnNote": "8 November: Alfa Pendular 134 booked, 18:40 Porto Campanhã → 21:22 Lisboa Oriente. Victoria only; the onward transfer and accommodation are still to be arranged."
     },
     "shortDays": [
       [
@@ -1173,8 +1181,8 @@ const HANDBOOK_LOCALES = {
         "11-08",
         "Porto / Lisbon",
         "Porto → Lisbon",
-        "Morning Adjust Porto sightseeing around the return journey to Lisbon|To arrange Porto to Lisbon|To confirm Lisbon accommodation and airport transport for the next day",
-        "Flight departs Lisbon on November 9 at 11:05. Porto–Lisbon transport and accommodation for November 8 are still to be booked. Victoria only: the original Meliá Lisboa Aeroporto booking was cancelled. Tonight’s accommodation needs to be rearranged."
+        "Morning Adjust Porto sightseeing around the return journey to Lisbon|18:40 Depart Porto Campanhã on Alfa Pendular 134|21:22 Arrive at Lisboa Oriente|After arrival Transfer to accommodation and airport transport for the next day still to be arranged",
+        "Victoria’s Alfa Pendular 134 train is booked, 18:40–21:22. Her flight leaves Lisbon on 9 November at 11:05. The original Meliá Lisboa Aeroporto booking was cancelled; tonight’s accommodation and transfer need to be arranged."
       ],
       [
         "11-09",
@@ -1509,7 +1517,7 @@ const HANDBOOK_LOCALES = {
         "Oporto",
         "Ribeira y Vila Nova de Gaia",
         "09:00 Iglesia y torre de los Clérigos|11:00 Praça da Liberdade y McDonald's Imperial|12:30 Comida|14:00 Paseo por la Ribeira|15:30 Puente de Don Luis I|16:30 Vila Nova de Gaia, bodega por elegir|Por la noche Vistas nocturnas del puente y cena",
-        "Victoria sale de Lisboa al día siguiente a las 11:05. Traslado de Oporto a Lisboa pendiente de confirmar. Alojamiento en Oporto del 8 al 10 de noviembre pendiente de confirmar."
+        "Victoria toma el Alfa Pendular 134 reservado el 8 de noviembre: 18:40 Porto Campanhã → 21:22 Lisboa Oriente; su vuelo sale de Lisboa al día siguiente a las 11:05. Andy se queda en Oporto; alojamiento del 8 al 10 de noviembre por confirmar."
       ],
       [
         "11-09",
@@ -1703,6 +1711,14 @@ const HANDBOOK_LOCALES = {
         "09:30–12:43 · IC",
         "Reservado",
         "Andy、Victoria"
+      ],
+      [
+        "11/08",
+        "Oporto → Lisboa",
+        "Porto Campanhã → Lisboa Oriente",
+        "18:40–21:22 · Alfa Pendular 134",
+        "Reservado",
+        "Victoria"
       ],
       [
         "11/12",
@@ -2006,7 +2022,7 @@ const HANDBOOK_LOCALES = {
       "soloTrip": "Del 10 al 24 de noviembre, Andy recorre el centro y el sur de España.",
       "pendingPlans": "Por organizar",
       "returnLisbonTitle": "8 de noviembre · Victoria vuelve a Lisboa",
-      "returnLisbonNote": "Vuelo desde Lisboa el 9 de noviembre a las 11:05. Billete de Oporto a Lisboa y alojamiento para la noche del 8 de noviembre por reservar.",
+      "returnLisbonNote": "El tren de Victoria a Lisboa del 8 de noviembre está reservado: 18:40 Porto Campanhã → 21:22 Lisboa Oriente, Alfa Pendular 134. Alojamiento y traslado tras la llegada pendientes; su vuelo sale de Lisboa el 9 de noviembre a las 11:05.",
       "gaudiTitle": "26 de noviembre · Arquitectura de Gaudí",
       "gaudiNote": "Sagrada Familia por reservar; la subida a las torres a las 14:30 se solapa con la visita al Hospital de Sant Pau.",
       "staysTickets": "Alojamiento y entradas",
@@ -2017,7 +2033,6 @@ const HANDBOOK_LOCALES = {
       "localTimes": "Todos los horarios son locales.",
       "intercity": "Transporte entre ciudades",
       "portoLisbon": "Oporto → Lisboa",
-      "trainPending": "Tren por reservar. Vuelo desde Lisboa el 9 de noviembre a las 11:05.",
       "stationMap": "Mapa de la estación de salida",
       "localTransfers": "Traslados entre el aeropuerto y la ciudad",
       "lisbonPorto": "Lisboa y Oporto",
@@ -2105,7 +2120,8 @@ const HANDBOOK_LOCALES = {
       "staySource": "Actualizado según la captura de reservas facilitada el 12 de octubre de 2026. Importes por reserva, no por persona.",
       "people": "Huéspedes",
       "staysTicketsNoteShort": "Confirmados Lisboa del 2 al 7 y Oporto del 7 al 8 de noviembre. Hay que reorganizar la noche del 8 de Victoria; quedan hoteles y entradas por confirmar.",
-      "staysTicketsNoteFull": "Confirmados Lisboa del 2 al 7 y Oporto del 7 al 8 de noviembre. Pendientes el alojamiento de Andy en Oporto del 8 al 10 y los demás hoteles y entradas."
+      "staysTicketsNoteFull": "Confirmados Lisboa del 2 al 7 y Oporto del 7 al 8 de noviembre. Pendientes el alojamiento de Andy en Oporto del 8 al 10 y los demás hoteles y entradas.",
+      "trainReturnNote": "8 de noviembre: Alfa Pendular 134 reservado, 18:40 Porto Campanhã → 21:22 Lisboa Oriente. Solo Victoria; traslado posterior y alojamiento pendientes."
     },
     "shortDays": [
       [
@@ -2154,8 +2170,8 @@ const HANDBOOK_LOCALES = {
         "11-08",
         "Oporto / Lisboa",
         "Oporto → Lisboa",
-        "Por la mañana Visitas en Oporto según el horario del traslado a Lisboa|Por organizar Traslado de Oporto a Lisboa|Por confirmar Alojamiento en Lisboa y traslado al aeropuerto al día siguiente",
-        "Vuelo desde Lisboa el 9 de noviembre a las 11:05. Transporte de Oporto a Lisboa y alojamiento del 8 de noviembre por reservar. Solo Victoria: la reserva original de Meliá Lisboa Aeroporto se canceló. Hay que reorganizar el alojamiento de esta noche."
+        "Por la mañana Visitas en Oporto según el horario del traslado a Lisboa|18:40 Salida de Porto Campanhã en Alfa Pendular 134|21:22 Llegada a Lisboa Oriente|A la llegada Traslado al alojamiento y al aeropuerto al día siguiente pendientes de organizar",
+        "El Alfa Pendular 134 de Victoria está reservado, 18:40–21:22. Su vuelo sale de Lisboa el 9 de noviembre a las 11:05. La reserva original de Meliá Lisboa Aeroporto se canceló; hay que organizar el alojamiento de esta noche y el traslado."
       ],
       [
         "11-09",
@@ -2490,7 +2506,7 @@ const HANDBOOK_LOCALES = {
         "Porto",
         "Ribeira e Vila Nova de Gaia",
         "09:00 Igreja e Torre dos Clérigos|11:00 Praça da Liberdade e McDonald's Imperial|12:30 Almoço|14:00 Ribeira|15:30 Ponte Luís I|16:30 Vila Nova de Gaia; cave de vinho por escolher|Noite Vista noturna da ponte e jantar",
-        "Victoria parte de Lisboa no dia seguinte às 11:05. Transporte Porto → Lisboa por confirmar. Alojamento no Porto de 8 a 10 de novembro por confirmar."
+        "Victoria viaja no Alfa Pendular 134 reservado a 8 de novembro: 18:40 Porto Campanhã → 21:22 Lisboa Oriente; o voo parte de Lisboa no dia seguinte às 11:05. Andy fica no Porto; alojamento de 8 a 10 de novembro por confirmar."
       ],
       [
         "11-09",
@@ -2684,6 +2700,14 @@ const HANDBOOK_LOCALES = {
         "09:30–12:43 · IC",
         "Reservado",
         "Andy e Victoria"
+      ],
+      [
+        "11/08",
+        "Porto → Lisboa",
+        "Porto Campanhã → Lisboa Oriente",
+        "18:40–21:22 · Alfa Pendular 134",
+        "Reservado",
+        "Victoria"
       ],
       [
         "11/12",
@@ -2987,7 +3011,7 @@ const HANDBOOK_LOCALES = {
       "soloTrip": "De 10 a 24 de novembro, Andy viaja pelo centro e sul de Espanha.",
       "pendingPlans": "Por organizar",
       "returnLisbonTitle": "8 de novembro · Victoria regressa a Lisboa",
-      "returnLisbonNote": "Partida de Lisboa a 9 de novembro, às 11:05. Bilhete Porto–Lisboa e alojamento da noite anterior por reservar.",
+      "returnLisbonNote": "O comboio de Victoria para Lisboa a 8 de novembro está reservado: 18:40 Porto Campanhã → 21:22 Lisboa Oriente, Alfa Pendular 134. Alojamento e transporte após a chegada por organizar; o voo parte de Lisboa a 9 de novembro às 11:05.",
       "gaudiTitle": "26 de novembro · Arquitetura de Gaudí",
       "gaudiNote": "Sagrada Família por reservar; a subida à torre às 14:30 coincide com a visita ao Hospital de Sant Pau.",
       "staysTickets": "Alojamento e bilhetes",
@@ -2998,7 +3022,6 @@ const HANDBOOK_LOCALES = {
       "localTimes": "Todos os horários são locais.",
       "intercity": "Transportes entre cidades",
       "portoLisbon": "Porto → Lisboa",
-      "trainPending": "Comboio por reservar. Partida de Lisboa a 9 de novembro, às 11:05.",
       "stationMap": "Mapa da estação de partida",
       "localTransfers": "Ligações entre aeroportos e cidades",
       "lisbonPorto": "Lisboa e Porto",
@@ -3086,7 +3109,8 @@ const HANDBOOK_LOCALES = {
       "staySource": "Atualizado com base na captura das reservas fornecida a 12 de outubro de 2026. Valores por reserva, não por pessoa.",
       "people": "Hóspedes",
       "staysTicketsNoteShort": "Confirmados Lisboa de 2 a 7 e Porto de 7 a 8 de novembro. É necessário reorganizar a noite de 8 de novembro de Victoria; restantes alojamentos e bilhetes por confirmar.",
-      "staysTicketsNoteFull": "Confirmados Lisboa de 2 a 7 e Porto de 7 a 8 de novembro. Alojamento de Andy no Porto de 8 a 10 e restantes alojamentos e bilhetes por confirmar."
+      "staysTicketsNoteFull": "Confirmados Lisboa de 2 a 7 e Porto de 7 a 8 de novembro. Alojamento de Andy no Porto de 8 a 10 e restantes alojamentos e bilhetes por confirmar.",
+      "trainReturnNote": "8 de novembro: Alfa Pendular 134 reservado, 18:40 Porto Campanhã → 21:22 Lisboa Oriente. Apenas Victoria; transporte após a chegada e alojamento por organizar."
     },
     "shortDays": [
       [
@@ -3135,8 +3159,8 @@ const HANDBOOK_LOCALES = {
         "11-08",
         "Porto / Lisboa",
         "Porto → Lisboa",
-        "Manhã Programa no Porto a ajustar ao transporte de regresso a Lisboa|Por organizar Porto–Lisboa|Por confirmar Alojamento em Lisboa e transporte para o aeroporto no dia seguinte",
-        "Partida de Lisboa a 9 de novembro, às 11:05. Transporte Porto–Lisboa e alojamento de 8 de novembro por reservar. Apenas Victoria: a reserva original do Meliá Lisboa Aeroporto foi cancelada. É necessário reorganizar o alojamento desta noite."
+        "Manhã Programa no Porto a ajustar ao transporte de regresso a Lisboa|18:40 Partida de Porto Campanhã no Alfa Pendular 134|21:22 Chegada a Lisboa Oriente|Após a chegada Transporte para o alojamento e para o aeroporto no dia seguinte por organizar",
+        "O Alfa Pendular 134 de Victoria está reservado, 18:40–21:22. O voo parte de Lisboa a 9 de novembro às 11:05. A reserva original do Meliá Lisboa Aeroporto foi cancelada; alojamento desta noite e transporte por organizar."
       ],
       [
         "11-09",
