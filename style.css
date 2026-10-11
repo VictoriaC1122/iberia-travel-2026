@@ -628,3 +628,11 @@ body:not([data-lang="zh-TW"]) .day-stamp span{letter-spacing:0}
 .airfare-amounts>div{display:block;border:0;padding:0}
 .airfare-amounts dd{text-align:left}
 @media(max-width:700px){.airfare-amounts>div+div{border-top:1px solid #cbd3c4;padding-top:18px}}
+
+/* Booking status and totals. */
+.pill.cancelled{background:#edecea;color:#66635f}
+.stay-price{margin:16px 0;font-family:var(--font-sans);font-variant-numeric:tabular-nums}
+.stay-price>div{flex-wrap:wrap}
+.stay-price dd{font-weight:600;color:var(--ink);white-space:nowrap}
+.cancelled-stays .card{background:#f4f3f0}
+.card .stay-city{margin-top:-6px}

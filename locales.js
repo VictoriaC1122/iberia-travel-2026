@@ -132,7 +132,18 @@ const HANDBOOK_LOCALES = {
       "originalFare": "原幣票價",
       "cardNotificationAmount": "信用卡通知金額",
       "convertFare": "換算其他貨幣",
-      "currencyPending": "幣別待確認"
+      "currencyPending": "幣別待確認",
+      "confirmed": "已確認",
+      "cancelled": "已取消",
+      "cancelledBookings": "已取消訂單",
+      "cancelledBookingsNote": "以下訂單已取消，不列入目前住宿安排；金額為原訂單金額。",
+      "bookingTotal": "訂單總額",
+      "originalBookingTotal": "原訂單金額",
+      "bookingDates": "訂房日期（入住－退房）",
+      "staySource": "依 2026/10/12 提供的訂單截圖更新。金額為整筆訂單，非每人費用。",
+      "people": "入住旅客",
+      "staysTicketsNoteShort": "里斯本 11/02–11/07、波多 11/07–11/08 住宿已確認。Victoria 11/08 住宿待重新安排；其餘旅館與票券待確認。",
+      "staysTicketsNoteFull": "里斯本 11/02–11/07、波多 11/07–11/08 住宿已確認。Andy 11/08–11/10 波多住宿及其餘旅館與票券待確認。"
     },
     "shortDays": [
       [
@@ -147,7 +158,7 @@ const HANDBOOK_LOCALES = {
         "里斯本",
         "里斯本市中心、希亞多",
         "09:05 Victoria 抵達里斯本 LIS|上午 寄放行李、休息補眠|14:00 商業廣場 Praça do Comércio|14:30 奧古斯塔街 Rua Augusta|15:00 羅西歐廣場 Rossio|15:30 聖胡斯塔升降機周邊|16:00 希亞多區、卡爾莫修道院、貝特朗書店|17:00 聖佩德羅或山上聖母觀景台|19:00 晚餐",
-        "升降機開放狀態、提早入住與行李寄放待確認。"
+        "升降機開放狀態、提早入住與行李寄放待確認。 住宿：安橋阿祖爾旅館已確認，訂房 11/02–11/07；11/03 早上抵達的入住方式待旅館確認。"
       ],
       [
         "11-04",
@@ -175,14 +186,14 @@ const HANDBOOK_LOCALES = {
         "波多",
         "里斯本 → 波多",
         "09:30 IC：Lisboa Santa Apolónia 出發|12:43 抵達 Porto Campanhã|中午 寄放行李、午餐|14:00 聖本篤車站 São Bento|14:30 波多主教座堂|15:30 聖卡塔琳娜街|16:30 博良市場|19:00 晚餐",
-        "里斯本至波多火車已訂，兩人同行。"
+        "里斯本至波多火車已訂，兩人同行。 住宿：Oporto Trendy Formosa 已確認，11/07 入住、11/08 退房。"
       ],
       [
         "11-08",
         "波多／里斯本",
         "波多 → 里斯本",
         "上午 波多行程依返里斯本交通調整|待安排 波多至里斯本|待確認 里斯本住宿與隔日機場交通",
-        "11/09 11:05 里斯本起飛。波多回里斯本交通、11/08 住宿待訂。"
+        "11/09 11:05 里斯本起飛。波多回里斯本交通、11/08 住宿待訂。 僅 Victoria：原 Meliá Lisboa Aeroporto 訂單已取消，今晚住宿待重新安排。"
       ],
       [
         "11-09",
@@ -304,24 +315,35 @@ const HANDBOOK_LOCALES = {
     "staysShort": [
       {
         "city": "里斯本",
-        "start": "11-03",
+        "start": "11-02",
         "end": "11-07",
-        "nights": 4,
-        "note": "11/02 是否加訂一晚待定。"
+        "nights": 5,
+        "note": "訂房自 11/02 起，共 5 晚；兩人 11/03 抵達里斯本。請事先告知旅館隔日早上抵達，並確認保留房間與入住方式。",
+        "hotel": "安橋阿祖爾旅館",
+        "status": "confirmed",
+        "amount": 21367,
+        "currency": "TWD",
+        "guests": "Victoria、Andy"
       },
       {
         "city": "波多",
         "start": "11-07",
-        "end": null,
-        "nights": null,
-        "note": "回里斯本日期待定。"
+        "end": "11-08",
+        "nights": 1,
+        "note": "已確認 11/07 入住、11/08 退房，共 1 晚。",
+        "hotel": "Oporto Trendy Formosa",
+        "status": "confirmed",
+        "amount": 3666,
+        "currency": "TWD",
+        "guests": "Victoria、Andy"
       },
       {
         "city": "里斯本／機場周邊",
         "start": "11-08",
         "end": "11-09",
-        "nights": null,
-        "note": "待訂。"
+        "nights": 1,
+        "note": "僅 Victoria。原 Meliá Lisboa Aeroporto 訂單已取消，11/08–11/09 住宿待重新安排。",
+        "guests": "僅 Victoria"
       },
       {
         "city": "巴塞隆納",
@@ -334,17 +356,35 @@ const HANDBOOK_LOCALES = {
     "staysFull": [
       {
         "city": "里斯本",
-        "start": "11-03",
+        "start": "11-02",
         "end": "11-07",
-        "nights": 4,
-        "note": "11/02 是否加訂一晚待定。"
+        "nights": 5,
+        "note": "訂房自 11/02 起，共 5 晚；兩人 11/03 抵達里斯本。請事先告知旅館隔日早上抵達，並確認保留房間與入住方式。",
+        "hotel": "安橋阿祖爾旅館",
+        "status": "confirmed",
+        "amount": 21367,
+        "currency": "TWD",
+        "guests": "Victoria、Andy"
       },
       {
         "city": "波多",
         "start": "11-07",
+        "end": "11-08",
+        "nights": 1,
+        "note": "已確認 11/07 入住、11/08 退房，共 1 晚。",
+        "hotel": "Oporto Trendy Formosa",
+        "status": "confirmed",
+        "amount": 3666,
+        "currency": "TWD",
+        "guests": "Victoria、Andy"
+      },
+      {
+        "city": "波多",
+        "start": "11-08",
         "end": "11-10",
-        "nights": 3,
-        "note": "11/10 清晨退房，方式待確認。"
+        "nights": 2,
+        "note": "Andy 11/08–11/10 的波多住宿仍待確認；11/10 清晨退房方式待確認。",
+        "guests": "Andy"
       },
       {
         "city": "塞維亞",
@@ -381,6 +421,46 @@ const HANDBOOK_LOCALES = {
         "nights": 7,
         "note": "最後一晚 12/01。"
       }
+    ],
+    "cancelledStaysShort": [
+      {
+        "city": "里斯本",
+        "start": "11-02",
+        "end": "11-07",
+        "nights": 5,
+        "hotel": "法多拜羅阿爾托公寓",
+        "status": "cancelled",
+        "amount": 23860,
+        "currency": "TWD",
+        "guests": "Victoria、Andy",
+        "note": "原訂單已取消；目前里斯本住宿為安橋阿祖爾旅館。"
+      },
+      {
+        "city": "里斯本／機場周邊",
+        "start": "11-08",
+        "end": "11-09",
+        "nights": 1,
+        "hotel": "Meliá Lisboa Aeroporto",
+        "status": "cancelled",
+        "amount": 5656,
+        "currency": "TWD",
+        "guests": "僅 Victoria",
+        "note": "僅 Victoria；此訂單已取消，替代住宿待訂。"
+      }
+    ],
+    "cancelledStaysFull": [
+      {
+        "city": "里斯本",
+        "start": "11-02",
+        "end": "11-07",
+        "nights": 5,
+        "hotel": "法多拜羅阿爾托公寓",
+        "status": "cancelled",
+        "amount": 23860,
+        "currency": "TWD",
+        "guests": "Victoria、Andy",
+        "note": "原訂單已取消；目前里斯本住宿為安橋阿祖爾旅館。"
+      }
     ]
   },
   "en": {
@@ -413,7 +493,7 @@ const HANDBOOK_LOCALES = {
         "Lisbon",
         "Central Lisbon and Chiado",
         "01:20 Depart Doha|06:20 Andy arrives in Lisbon LIS|09:05 Victoria arrives in Lisbon LIS|Morning Drop off luggage and catch up on sleep|14:00 Praça do Comércio|14:30 Rua Augusta|15:00 Rossio Square|15:30 Around the Santa Justa Lift|16:00 Chiado, Carmo Convent and Bertrand Bookshop|17:00 São Pedro de Alcântara or Senhora do Monte viewpoint|19:00 Dinner",
-        "Confirm whether the lift is open, plus early check-in and luggage storage."
+        "Confirm whether the lift is open, plus early check-in and luggage storage. Stay: Anjo Azul confirmed for 2–7 November. Check-in arrangements for the morning arrival on 3 November need hotel confirmation."
       ],
       [
         "11-04",
@@ -441,14 +521,14 @@ const HANDBOOK_LOCALES = {
         "Porto",
         "Lisbon → Porto",
         "09:30 IC train departs Lisboa Santa Apolónia|12:43 Arrive at Porto Campanhã|Midday Drop off luggage and have lunch|14:00 São Bento station|14:30 Porto Cathedral|15:30 Rua de Santa Catarina|16:30 Bolhão Market|19:00 Dinner",
-        "Lisbon–Porto train booked; both travelers are taking it together."
+        "Lisbon–Porto train booked; both travelers are taking it together. Stay: Oporto Trendy Formosa confirmed, check-in 7 November and check-out 8 November."
       ],
       [
         "11-08",
         "Porto",
         "Ribeira waterfront and Vila Nova de Gaia",
         "09:00 Clérigos Church and Tower|11:00 Praça da Liberdade and McDonald's Imperial|12:30 Lunch|14:00 Ribeira waterfront|15:30 Dom Luís I Bridge|16:30 Vila Nova de Gaia; wine cellar still to be chosen|Evening Bridge views after dark and dinner",
-        "Victoria flies from Lisbon at 11:05 the next day; Porto → Lisbon transport still needs to be confirmed."
+        "Victoria flies from Lisbon at 11:05 the next day; Porto → Lisbon transport still needs to be confirmed. Porto accommodation for 8–10 November remains unconfirmed."
       ],
       [
         "11-09",
@@ -1033,7 +1113,18 @@ const HANDBOOK_LOCALES = {
       "originalFare": "Fare in original currency",
       "cardNotificationAmount": "Amount in credit card notification",
       "convertFare": "Convert to other currencies",
-      "currencyPending": "Currency to confirm"
+      "currencyPending": "Currency to confirm",
+      "confirmed": "Confirmed",
+      "cancelled": "Cancelled",
+      "cancelledBookings": "Cancelled bookings",
+      "cancelledBookingsNote": "These bookings are cancelled and excluded from current accommodation plans. Amounts are the original booking totals.",
+      "bookingTotal": "Booking total",
+      "originalBookingTotal": "Original booking total",
+      "bookingDates": "Booking dates (check-in – check-out)",
+      "staySource": "Updated from the booking screenshot provided on 12 October 2026. Amounts are per booking, not per person.",
+      "people": "Guests",
+      "staysTicketsNoteShort": "Lisbon, 2–7 November, and Porto, 7–8 November, are confirmed. Victoria’s 8 November stay needs to be rearranged; remaining hotels and tickets still need confirmation.",
+      "staysTicketsNoteFull": "Lisbon, 2–7 November, and Porto, 7–8 November, are confirmed. Andy’s Porto stay for 8–10 November and remaining hotels and tickets still need confirmation."
     },
     "shortDays": [
       [
@@ -1048,7 +1139,7 @@ const HANDBOOK_LOCALES = {
         "Lisbon",
         "Central Lisbon and Chiado",
         "09:05 Victoria arrives in Lisbon LIS|Morning Drop off luggage and catch up on sleep|14:00 Praça do Comércio|14:30 Rua Augusta|15:00 Rossio Square|15:30 Around the Santa Justa Lift|16:00 Chiado, Carmo Convent and Bertrand Bookshop|17:00 São Pedro de Alcântara or Senhora do Monte viewpoint|19:00 Dinner",
-        "Confirm whether the lift is open, plus early check-in and luggage storage."
+        "Confirm whether the lift is open, plus early check-in and luggage storage. Stay: Anjo Azul confirmed for 2–7 November. Check-in arrangements for the morning arrival on 3 November need hotel confirmation."
       ],
       [
         "11-04",
@@ -1076,14 +1167,14 @@ const HANDBOOK_LOCALES = {
         "Porto",
         "Lisbon → Porto",
         "09:30 IC train departs Lisboa Santa Apolónia|12:43 Arrive at Porto Campanhã|Midday Drop off luggage and have lunch|14:00 São Bento station|14:30 Porto Cathedral|15:30 Rua de Santa Catarina|16:30 Bolhão Market|19:00 Dinner",
-        "Lisbon–Porto train booked; both travelers are taking it together."
+        "Lisbon–Porto train booked; both travelers are taking it together. Stay: Oporto Trendy Formosa confirmed, check-in 7 November and check-out 8 November."
       ],
       [
         "11-08",
         "Porto / Lisbon",
         "Porto → Lisbon",
         "Morning Adjust Porto sightseeing around the return journey to Lisbon|To arrange Porto to Lisbon|To confirm Lisbon accommodation and airport transport for the next day",
-        "Flight departs Lisbon on November 9 at 11:05. Porto–Lisbon transport and accommodation for November 8 are still to be booked."
+        "Flight departs Lisbon on November 9 at 11:05. Porto–Lisbon transport and accommodation for November 8 are still to be booked. Victoria only: the original Meliá Lisboa Aeroporto booking was cancelled. Tonight’s accommodation needs to be rearranged."
       ],
       [
         "11-09",
@@ -1205,24 +1296,35 @@ const HANDBOOK_LOCALES = {
     "staysShort": [
       {
         "city": "Lisbon",
-        "start": "11-03",
+        "start": "11-02",
         "end": "11-07",
-        "nights": 4,
-        "note": "An extra night for November 2 is still under consideration."
+        "nights": 5,
+        "note": "Booked from 2 November for 5 nights; both travellers arrive in Lisbon on 3 November. Tell the hotel about the next-morning arrival and confirm that the room will be held and how to check in.",
+        "hotel": "Anjo Azul",
+        "status": "confirmed",
+        "amount": 21367,
+        "currency": "TWD",
+        "guests": "Victoria, Andy"
       },
       {
         "city": "Porto",
         "start": "11-07",
-        "end": null,
-        "nights": null,
-        "note": "Return date to Lisbon still to be decided."
+        "end": "11-08",
+        "nights": 1,
+        "note": "Confirmed for check-in on 7 November and check-out on 8 November, 1 night.",
+        "hotel": "Oporto Trendy Formosa",
+        "status": "confirmed",
+        "amount": 3666,
+        "currency": "TWD",
+        "guests": "Victoria, Andy"
       },
       {
         "city": "Lisbon / airport area",
         "start": "11-08",
         "end": "11-09",
-        "nights": null,
-        "note": "To book."
+        "nights": 1,
+        "note": "Victoria only. The original Meliá Lisboa Aeroporto booking was cancelled; accommodation for 8–9 November needs to be arranged again.",
+        "guests": "Victoria only"
       },
       {
         "city": "Barcelona",
@@ -1235,17 +1337,35 @@ const HANDBOOK_LOCALES = {
     "staysFull": [
       {
         "city": "Lisbon",
-        "start": "11-03",
+        "start": "11-02",
         "end": "11-07",
-        "nights": 4,
-        "note": "An extra night for November 2 is still under consideration."
+        "nights": 5,
+        "note": "Booked from 2 November for 5 nights; both travellers arrive in Lisbon on 3 November. Tell the hotel about the next-morning arrival and confirm that the room will be held and how to check in.",
+        "hotel": "Anjo Azul",
+        "status": "confirmed",
+        "amount": 21367,
+        "currency": "TWD",
+        "guests": "Victoria, Andy"
       },
       {
         "city": "Porto",
         "start": "11-07",
+        "end": "11-08",
+        "nights": 1,
+        "note": "Confirmed for check-in on 7 November and check-out on 8 November, 1 night.",
+        "hotel": "Oporto Trendy Formosa",
+        "status": "confirmed",
+        "amount": 3666,
+        "currency": "TWD",
+        "guests": "Victoria, Andy"
+      },
+      {
+        "city": "Porto",
+        "start": "11-08",
         "end": "11-10",
-        "nights": 3,
-        "note": "Early-morning checkout on November 10; arrangements still to be confirmed."
+        "nights": 2,
+        "note": "Andy’s Porto accommodation for 8–10 November is still to be confirmed, including early check-out on 10 November.",
+        "guests": "Andy"
       },
       {
         "city": "Seville",
@@ -1282,6 +1402,46 @@ const HANDBOOK_LOCALES = {
         "nights": 7,
         "note": "Final night: December 1."
       }
+    ],
+    "cancelledStaysShort": [
+      {
+        "city": "Lisbon",
+        "start": "11-02",
+        "end": "11-07",
+        "nights": 5,
+        "hotel": "Fado Bairro Alto Apartments",
+        "status": "cancelled",
+        "amount": 23860,
+        "currency": "TWD",
+        "guests": "Victoria, Andy",
+        "note": "Original booking cancelled; the current Lisbon booking is Anjo Azul."
+      },
+      {
+        "city": "Lisbon / airport area",
+        "start": "11-08",
+        "end": "11-09",
+        "nights": 1,
+        "hotel": "Meliá Lisboa Aeroporto",
+        "status": "cancelled",
+        "amount": 5656,
+        "currency": "TWD",
+        "guests": "Victoria only",
+        "note": "Victoria only. This booking is cancelled; replacement accommodation is pending."
+      }
+    ],
+    "cancelledStaysFull": [
+      {
+        "city": "Lisbon",
+        "start": "11-02",
+        "end": "11-07",
+        "nights": 5,
+        "hotel": "Fado Bairro Alto Apartments",
+        "status": "cancelled",
+        "amount": 23860,
+        "currency": "TWD",
+        "guests": "Victoria, Andy",
+        "note": "Original booking cancelled; the current Lisbon booking is Anjo Azul."
+      }
     ]
   },
   "es": {
@@ -1314,7 +1474,7 @@ const HANDBOOK_LOCALES = {
         "Lisboa",
         "Centro de Lisboa y Chiado",
         "01:20 Salida de Doha|06:20 Andy llega a Lisboa LIS|09:05 Victoria llega a Lisboa LIS|Por la mañana Dejar el equipaje y descansar|14:00 Praça do Comércio|14:30 Rua Augusta|15:00 Plaza del Rossio|15:30 Alrededores del elevador de Santa Justa|16:00 Chiado, convento do Carmo y librería Bertrand|17:00 Mirador de São Pedro de Alcântara o de Nossa Senhora do Monte|19:00 Cena",
-        "Pendiente de confirmar la apertura del elevador, la entrada anticipada en el alojamiento y la consigna de equipaje."
+        "Pendiente de confirmar la apertura del elevador, la entrada anticipada en el alojamiento y la consigna de equipaje. Alojamiento: Anjo Azul confirmado del 2 al 7 de noviembre. Confirmar con el hotel el acceso al llegar la mañana del día 3."
       ],
       [
         "11-04",
@@ -1342,14 +1502,14 @@ const HANDBOOK_LOCALES = {
         "Oporto",
         "Lisboa → Oporto",
         "09:30 Salida en IC de Lisboa Santa Apolónia|12:43 Llegada a Porto Campanhã|A mediodía Dejar el equipaje y comer|14:00 Estación de São Bento|14:30 Catedral de Oporto|15:30 Rua de Santa Catarina|16:30 Mercado do Bolhão|19:00 Cena",
-        "Tren de Lisboa a Oporto: Reservado. Viajan los dos."
+        "Tren de Lisboa a Oporto: Reservado. Viajan los dos. Alojamiento: Oporto Trendy Formosa confirmado, entrada el 7 y salida el 8 de noviembre."
       ],
       [
         "11-08",
         "Oporto",
         "Ribeira y Vila Nova de Gaia",
         "09:00 Iglesia y torre de los Clérigos|11:00 Praça da Liberdade y McDonald's Imperial|12:30 Comida|14:00 Paseo por la Ribeira|15:30 Puente de Don Luis I|16:30 Vila Nova de Gaia, bodega por elegir|Por la noche Vistas nocturnas del puente y cena",
-        "Victoria sale de Lisboa al día siguiente a las 11:05. Traslado de Oporto a Lisboa pendiente de confirmar."
+        "Victoria sale de Lisboa al día siguiente a las 11:05. Traslado de Oporto a Lisboa pendiente de confirmar. Alojamiento en Oporto del 8 al 10 de noviembre pendiente de confirmar."
       ],
       [
         "11-09",
@@ -1934,7 +2094,18 @@ const HANDBOOK_LOCALES = {
       "originalFare": "Tarifa en moneda original",
       "cardNotificationAmount": "Importe del aviso de la tarjeta de crédito",
       "convertFare": "Convertir a otras monedas",
-      "currencyPending": "Moneda por confirmar"
+      "currencyPending": "Moneda por confirmar",
+      "confirmed": "Confirmado",
+      "cancelled": "Cancelado",
+      "cancelledBookings": "Reservas canceladas",
+      "cancelledBookingsNote": "Estas reservas están canceladas y no forman parte del alojamiento actual. Los importes corresponden a las reservas originales.",
+      "bookingTotal": "Total de la reserva",
+      "originalBookingTotal": "Importe original",
+      "bookingDates": "Fechas de la reserva (entrada – salida)",
+      "staySource": "Actualizado según la captura de reservas facilitada el 12 de octubre de 2026. Importes por reserva, no por persona.",
+      "people": "Huéspedes",
+      "staysTicketsNoteShort": "Confirmados Lisboa del 2 al 7 y Oporto del 7 al 8 de noviembre. Hay que reorganizar la noche del 8 de Victoria; quedan hoteles y entradas por confirmar.",
+      "staysTicketsNoteFull": "Confirmados Lisboa del 2 al 7 y Oporto del 7 al 8 de noviembre. Pendientes el alojamiento de Andy en Oporto del 8 al 10 y los demás hoteles y entradas."
     },
     "shortDays": [
       [
@@ -1949,7 +2120,7 @@ const HANDBOOK_LOCALES = {
         "Lisboa",
         "Centro de Lisboa y Chiado",
         "09:05 Victoria llega a Lisboa LIS|Por la mañana Dejar el equipaje y descansar|14:00 Praça do Comércio|14:30 Rua Augusta|15:00 Plaza del Rossio|15:30 Alrededores del elevador de Santa Justa|16:00 Chiado, convento do Carmo y librería Bertrand|17:00 Mirador de São Pedro de Alcântara o de Nossa Senhora do Monte|19:00 Cena",
-        "Pendiente de confirmar la apertura del elevador, la entrada anticipada en el alojamiento y la consigna de equipaje."
+        "Pendiente de confirmar la apertura del elevador, la entrada anticipada en el alojamiento y la consigna de equipaje. Alojamiento: Anjo Azul confirmado del 2 al 7 de noviembre. Confirmar con el hotel el acceso al llegar la mañana del día 3."
       ],
       [
         "11-04",
@@ -1977,14 +2148,14 @@ const HANDBOOK_LOCALES = {
         "Oporto",
         "Lisboa → Oporto",
         "09:30 Salida en IC de Lisboa Santa Apolónia|12:43 Llegada a Porto Campanhã|A mediodía Dejar el equipaje y comer|14:00 Estación de São Bento|14:30 Catedral de Oporto|15:30 Rua de Santa Catarina|16:30 Mercado do Bolhão|19:00 Cena",
-        "Tren de Lisboa a Oporto: Reservado. Viajan los dos."
+        "Tren de Lisboa a Oporto: Reservado. Viajan los dos. Alojamiento: Oporto Trendy Formosa confirmado, entrada el 7 y salida el 8 de noviembre."
       ],
       [
         "11-08",
         "Oporto / Lisboa",
         "Oporto → Lisboa",
         "Por la mañana Visitas en Oporto según el horario del traslado a Lisboa|Por organizar Traslado de Oporto a Lisboa|Por confirmar Alojamiento en Lisboa y traslado al aeropuerto al día siguiente",
-        "Vuelo desde Lisboa el 9 de noviembre a las 11:05. Transporte de Oporto a Lisboa y alojamiento del 8 de noviembre por reservar."
+        "Vuelo desde Lisboa el 9 de noviembre a las 11:05. Transporte de Oporto a Lisboa y alojamiento del 8 de noviembre por reservar. Solo Victoria: la reserva original de Meliá Lisboa Aeroporto se canceló. Hay que reorganizar el alojamiento de esta noche."
       ],
       [
         "11-09",
@@ -2106,24 +2277,35 @@ const HANDBOOK_LOCALES = {
     "staysShort": [
       {
         "city": "Lisboa",
-        "start": "11-03",
+        "start": "11-02",
         "end": "11-07",
-        "nights": 4,
-        "note": "Pendiente de decidir si se reserva también la noche del 2 de noviembre."
+        "nights": 5,
+        "note": "Reserva del 2 al 7 de noviembre, 5 noches; ambos llegan a Lisboa el 3 de noviembre. Avisar al hotel de la llegada a la mañana siguiente y confirmar que mantendrá la habitación y cómo acceder.",
+        "hotel": "Anjo Azul",
+        "status": "confirmed",
+        "amount": 21367,
+        "currency": "TWD",
+        "guests": "Victoria, Andy"
       },
       {
         "city": "Oporto",
         "start": "11-07",
-        "end": null,
-        "nights": null,
-        "note": "Fecha de regreso a Lisboa por fijar."
+        "end": "11-08",
+        "nights": 1,
+        "note": "Entrada confirmada el 7 de noviembre y salida el 8 de noviembre, 1 noche.",
+        "hotel": "Oporto Trendy Formosa",
+        "status": "confirmed",
+        "amount": 3666,
+        "currency": "TWD",
+        "guests": "Victoria, Andy"
       },
       {
         "city": "Lisboa / alrededores del aeropuerto",
         "start": "11-08",
         "end": "11-09",
-        "nights": null,
-        "note": "Por reservar."
+        "nights": 1,
+        "note": "Solo Victoria. La reserva original de Meliá Lisboa Aeroporto se canceló; hay que organizar de nuevo el alojamiento del 8 al 9 de noviembre.",
+        "guests": "Solo Victoria"
       },
       {
         "city": "Barcelona",
@@ -2136,17 +2318,35 @@ const HANDBOOK_LOCALES = {
     "staysFull": [
       {
         "city": "Lisboa",
-        "start": "11-03",
+        "start": "11-02",
         "end": "11-07",
-        "nights": 4,
-        "note": "Pendiente de decidir si se reserva también la noche del 2 de noviembre."
+        "nights": 5,
+        "note": "Reserva del 2 al 7 de noviembre, 5 noches; ambos llegan a Lisboa el 3 de noviembre. Avisar al hotel de la llegada a la mañana siguiente y confirmar que mantendrá la habitación y cómo acceder.",
+        "hotel": "Anjo Azul",
+        "status": "confirmed",
+        "amount": 21367,
+        "currency": "TWD",
+        "guests": "Victoria, Andy"
       },
       {
         "city": "Oporto",
         "start": "11-07",
+        "end": "11-08",
+        "nights": 1,
+        "note": "Entrada confirmada el 7 de noviembre y salida el 8 de noviembre, 1 noche.",
+        "hotel": "Oporto Trendy Formosa",
+        "status": "confirmed",
+        "amount": 3666,
+        "currency": "TWD",
+        "guests": "Victoria, Andy"
+      },
+      {
+        "city": "Oporto",
+        "start": "11-08",
         "end": "11-10",
-        "nights": 3,
-        "note": "Salida del alojamiento a primera hora de la mañana del 10 de noviembre; procedimiento pendiente de confirmar."
+        "nights": 2,
+        "note": "El alojamiento de Andy en Oporto del 8 al 10 de noviembre sigue pendiente, incluida la salida de madrugada del día 10.",
+        "guests": "Andy"
       },
       {
         "city": "Sevilla",
@@ -2183,6 +2383,46 @@ const HANDBOOK_LOCALES = {
         "nights": 7,
         "note": "Última noche: 1 de diciembre."
       }
+    ],
+    "cancelledStaysShort": [
+      {
+        "city": "Lisboa",
+        "start": "11-02",
+        "end": "11-07",
+        "nights": 5,
+        "hotel": "Fado Bairro Alto Apartments",
+        "status": "cancelled",
+        "amount": 23860,
+        "currency": "TWD",
+        "guests": "Victoria, Andy",
+        "note": "Reserva original cancelada; la reserva actual de Lisboa es Anjo Azul."
+      },
+      {
+        "city": "Lisboa / alrededores del aeropuerto",
+        "start": "11-08",
+        "end": "11-09",
+        "nights": 1,
+        "hotel": "Meliá Lisboa Aeroporto",
+        "status": "cancelled",
+        "amount": 5656,
+        "currency": "TWD",
+        "guests": "Solo Victoria",
+        "note": "Solo Victoria. Reserva cancelada; alojamiento alternativo pendiente."
+      }
+    ],
+    "cancelledStaysFull": [
+      {
+        "city": "Lisboa",
+        "start": "11-02",
+        "end": "11-07",
+        "nights": 5,
+        "hotel": "Fado Bairro Alto Apartments",
+        "status": "cancelled",
+        "amount": 23860,
+        "currency": "TWD",
+        "guests": "Victoria, Andy",
+        "note": "Reserva original cancelada; la reserva actual de Lisboa es Anjo Azul."
+      }
     ]
   },
   "pt": {
@@ -2215,7 +2455,7 @@ const HANDBOOK_LOCALES = {
         "Lisboa",
         "Baixa de Lisboa e Chiado",
         "01:20 Partida de Doha|06:20 Andy chega a Lisboa LIS|09:05 Victoria chega a Lisboa LIS|Manhã Deixar as malas e descansar|14:00 Praça do Comércio|14:30 Rua Augusta|15:00 Rossio|15:30 Zona do Elevador de Santa Justa|16:00 Chiado, Convento do Carmo e Livraria Bertrand|17:00 Miradouro de São Pedro de Alcântara ou da Senhora do Monte|19:00 Jantar",
-        "Funcionamento do elevador, possibilidade de entrada antecipada no alojamento e depósito de bagagens por confirmar."
+        "Funcionamento do elevador, possibilidade de entrada antecipada no alojamento e depósito de bagagens por confirmar. Alojamento: Anjo Azul confirmado de 2 a 7 de novembro. Confirmar com o alojamento a entrada na manhã do dia 3."
       ],
       [
         "11-04",
@@ -2243,14 +2483,14 @@ const HANDBOOK_LOCALES = {
         "Porto",
         "Lisboa → Porto",
         "09:30 Partida de Lisboa Santa Apolónia em IC|12:43 Chegada a Porto Campanhã|Meio-dia Deixar as malas e almoçar|14:00 Estação de São Bento|14:30 Sé do Porto|15:30 Rua de Santa Catarina|16:30 Mercado do Bolhão|19:00 Jantar",
-        "Comboio Lisboa–Porto reservado; Andy e Victoria viajam juntos."
+        "Comboio Lisboa–Porto reservado; Andy e Victoria viajam juntos. Alojamento: Oporto Trendy Formosa confirmado, entrada a 7 e saída a 8 de novembro."
       ],
       [
         "11-08",
         "Porto",
         "Ribeira e Vila Nova de Gaia",
         "09:00 Igreja e Torre dos Clérigos|11:00 Praça da Liberdade e McDonald's Imperial|12:30 Almoço|14:00 Ribeira|15:30 Ponte Luís I|16:30 Vila Nova de Gaia; cave de vinho por escolher|Noite Vista noturna da ponte e jantar",
-        "Victoria parte de Lisboa no dia seguinte às 11:05. Transporte Porto → Lisboa por confirmar."
+        "Victoria parte de Lisboa no dia seguinte às 11:05. Transporte Porto → Lisboa por confirmar. Alojamento no Porto de 8 a 10 de novembro por confirmar."
       ],
       [
         "11-09",
@@ -2835,7 +3075,18 @@ const HANDBOOK_LOCALES = {
       "originalFare": "Tarifa na moeda original",
       "cardNotificationAmount": "Valor na notificação do cartão de crédito",
       "convertFare": "Converter para outras moedas",
-      "currencyPending": "Moeda por confirmar"
+      "currencyPending": "Moeda por confirmar",
+      "confirmed": "Confirmado",
+      "cancelled": "Cancelado",
+      "cancelledBookings": "Reservas canceladas",
+      "cancelledBookingsNote": "Estas reservas foram canceladas e não integram o alojamento atual. Os valores correspondem às reservas originais.",
+      "bookingTotal": "Total da reserva",
+      "originalBookingTotal": "Valor original",
+      "bookingDates": "Datas da reserva (entrada – saída)",
+      "staySource": "Atualizado com base na captura das reservas fornecida a 12 de outubro de 2026. Valores por reserva, não por pessoa.",
+      "people": "Hóspedes",
+      "staysTicketsNoteShort": "Confirmados Lisboa de 2 a 7 e Porto de 7 a 8 de novembro. É necessário reorganizar a noite de 8 de novembro de Victoria; restantes alojamentos e bilhetes por confirmar.",
+      "staysTicketsNoteFull": "Confirmados Lisboa de 2 a 7 e Porto de 7 a 8 de novembro. Alojamento de Andy no Porto de 8 a 10 e restantes alojamentos e bilhetes por confirmar."
     },
     "shortDays": [
       [
@@ -2850,7 +3101,7 @@ const HANDBOOK_LOCALES = {
         "Lisboa",
         "Baixa de Lisboa e Chiado",
         "09:05 Victoria chega a Lisboa LIS|Manhã Deixar as malas e descansar|14:00 Praça do Comércio|14:30 Rua Augusta|15:00 Rossio|15:30 Zona do Elevador de Santa Justa|16:00 Chiado, Convento do Carmo e Livraria Bertrand|17:00 Miradouro de São Pedro de Alcântara ou da Senhora do Monte|19:00 Jantar",
-        "Funcionamento do elevador, possibilidade de entrada antecipada no alojamento e depósito de bagagens por confirmar."
+        "Funcionamento do elevador, possibilidade de entrada antecipada no alojamento e depósito de bagagens por confirmar. Alojamento: Anjo Azul confirmado de 2 a 7 de novembro. Confirmar com o alojamento a entrada na manhã do dia 3."
       ],
       [
         "11-04",
@@ -2878,14 +3129,14 @@ const HANDBOOK_LOCALES = {
         "Porto",
         "Lisboa → Porto",
         "09:30 Partida de Lisboa Santa Apolónia em IC|12:43 Chegada a Porto Campanhã|Meio-dia Deixar as malas e almoçar|14:00 Estação de São Bento|14:30 Sé do Porto|15:30 Rua de Santa Catarina|16:30 Mercado do Bolhão|19:00 Jantar",
-        "Comboio Lisboa–Porto reservado; Andy e Victoria viajam juntos."
+        "Comboio Lisboa–Porto reservado; Andy e Victoria viajam juntos. Alojamento: Oporto Trendy Formosa confirmado, entrada a 7 e saída a 8 de novembro."
       ],
       [
         "11-08",
         "Porto / Lisboa",
         "Porto → Lisboa",
         "Manhã Programa no Porto a ajustar ao transporte de regresso a Lisboa|Por organizar Porto–Lisboa|Por confirmar Alojamento em Lisboa e transporte para o aeroporto no dia seguinte",
-        "Partida de Lisboa a 9 de novembro, às 11:05. Transporte Porto–Lisboa e alojamento de 8 de novembro por reservar."
+        "Partida de Lisboa a 9 de novembro, às 11:05. Transporte Porto–Lisboa e alojamento de 8 de novembro por reservar. Apenas Victoria: a reserva original do Meliá Lisboa Aeroporto foi cancelada. É necessário reorganizar o alojamento desta noite."
       ],
       [
         "11-09",
@@ -3007,24 +3258,35 @@ const HANDBOOK_LOCALES = {
     "staysShort": [
       {
         "city": "Lisboa",
-        "start": "11-03",
+        "start": "11-02",
         "end": "11-07",
-        "nights": 4,
-        "note": "Reserva de uma noite adicional a 2 de novembro por decidir."
+        "nights": 5,
+        "note": "Reserva de 2 a 7 de novembro, 5 noites; ambos chegam a Lisboa a 3 de novembro. Avisar o alojamento da chegada na manhã seguinte e confirmar a manutenção do quarto e o procedimento de entrada.",
+        "hotel": "Anjo Azul",
+        "status": "confirmed",
+        "amount": 21367,
+        "currency": "TWD",
+        "guests": "Victoria, Andy"
       },
       {
         "city": "Porto",
         "start": "11-07",
-        "end": null,
-        "nights": null,
-        "note": "Data de regresso a Lisboa por definir."
+        "end": "11-08",
+        "nights": 1,
+        "note": "Entrada confirmada a 7 de novembro e saída a 8 de novembro, 1 noite.",
+        "hotel": "Oporto Trendy Formosa",
+        "status": "confirmed",
+        "amount": 3666,
+        "currency": "TWD",
+        "guests": "Victoria, Andy"
       },
       {
         "city": "Lisboa / zona do aeroporto",
         "start": "11-08",
         "end": "11-09",
-        "nights": null,
-        "note": "Por reservar."
+        "nights": 1,
+        "note": "Apenas Victoria. A reserva original do Meliá Lisboa Aeroporto foi cancelada; é necessário reorganizar o alojamento de 8 a 9 de novembro.",
+        "guests": "Apenas Victoria"
       },
       {
         "city": "Barcelona",
@@ -3037,17 +3299,35 @@ const HANDBOOK_LOCALES = {
     "staysFull": [
       {
         "city": "Lisboa",
-        "start": "11-03",
+        "start": "11-02",
         "end": "11-07",
-        "nights": 4,
-        "note": "Reserva de uma noite adicional a 2 de novembro por decidir."
+        "nights": 5,
+        "note": "Reserva de 2 a 7 de novembro, 5 noites; ambos chegam a Lisboa a 3 de novembro. Avisar o alojamento da chegada na manhã seguinte e confirmar a manutenção do quarto e o procedimento de entrada.",
+        "hotel": "Anjo Azul",
+        "status": "confirmed",
+        "amount": 21367,
+        "currency": "TWD",
+        "guests": "Victoria, Andy"
       },
       {
         "city": "Porto",
         "start": "11-07",
+        "end": "11-08",
+        "nights": 1,
+        "note": "Entrada confirmada a 7 de novembro e saída a 8 de novembro, 1 noite.",
+        "hotel": "Oporto Trendy Formosa",
+        "status": "confirmed",
+        "amount": 3666,
+        "currency": "TWD",
+        "guests": "Victoria, Andy"
+      },
+      {
+        "city": "Porto",
+        "start": "11-08",
         "end": "11-10",
-        "nights": 3,
-        "note": "Saída do alojamento de madrugada a 10 de novembro; procedimento por confirmar."
+        "nights": 2,
+        "note": "O alojamento de Andy no Porto de 8 a 10 de novembro continua por confirmar, incluindo a saída de madrugada no dia 10.",
+        "guests": "Andy"
       },
       {
         "city": "Sevilha",
@@ -3083,6 +3363,46 @@ const HANDBOOK_LOCALES = {
         "end": "12-02",
         "nights": 7,
         "note": "Última noite a 1 de dezembro."
+      }
+    ],
+    "cancelledStaysShort": [
+      {
+        "city": "Lisboa",
+        "start": "11-02",
+        "end": "11-07",
+        "nights": 5,
+        "hotel": "Fado Bairro Alto Apartments",
+        "status": "cancelled",
+        "amount": 23860,
+        "currency": "TWD",
+        "guests": "Victoria, Andy",
+        "note": "Reserva original cancelada; a reserva atual em Lisboa é no Anjo Azul."
+      },
+      {
+        "city": "Lisboa / zona do aeroporto",
+        "start": "11-08",
+        "end": "11-09",
+        "nights": 1,
+        "hotel": "Meliá Lisboa Aeroporto",
+        "status": "cancelled",
+        "amount": 5656,
+        "currency": "TWD",
+        "guests": "Apenas Victoria",
+        "note": "Apenas Victoria. Reserva cancelada; alojamento alternativo por reservar."
+      }
+    ],
+    "cancelledStaysFull": [
+      {
+        "city": "Lisboa",
+        "start": "11-02",
+        "end": "11-07",
+        "nights": 5,
+        "hotel": "Fado Bairro Alto Apartments",
+        "status": "cancelled",
+        "amount": 23860,
+        "currency": "TWD",
+        "guests": "Victoria, Andy",
+        "note": "Reserva original cancelada; a reserva atual em Lisboa é no Anjo Azul."
       }
     ]
   }
