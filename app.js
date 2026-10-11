@@ -1,7 +1,7 @@
 const person=document.body.dataset.person||'andy';
 const shortTrip=person==='victoria';
 const name=shortTrip?'Victoria':'Andy';
-const tabs=Object.fromEntries(['overview','days','flights','transport','tickets','stays','notes','currency'].map(k=>[k,t(k)]));
+const tabs=Object.fromEntries(['overview','days','flights','transport','tickets','stays','budget','notes','currency'].map(k=>[k,t(k)]));
 const page=Object.hasOwn(tabs,params.get('page'))?params.get('page'):'overview';
 const data=lang==='zh-TW'?{DAYS,TRAINS,TICKETS,SPLIT_FLIGHTS,FULL_FLIGHTS,VICTORIA_EUROPE_STAYS}:catalog;
 const days=(shortTrip?catalog.shortDays:data.DAYS).map(d=>[...d]);
@@ -86,6 +86,54 @@ function stays(){
  const rows=shortTrip?catalog.staysShort:catalog.staysFull,cancelled=shortTrip?catalog.cancelledStaysShort:catalog.cancelledStaysFull;
  return heading(t('stays'),t('staySource'))+`<div class="grid stays-grid">${rows.map(stayCard).join('')}</div>`+heading(t('cancelledBookings'),t('cancelledBookingsNote'))+`<div class="grid cancelled-stays">${cancelled.map(stayCard).join('')}</div>`;
 }
+const BUDGET_CATEGORIES=['flights','stays','transport','tickets'];
+const BUDGET_STATUS={paid:['booked','budgetPaid'],due:['booked','budgetDue'],booked:['booked','booked'],tbc:['pending','unconfirmed'],pending:['pending','toBook']};
+function budgetEntry(item){
+ const entry={title:'',sub:'',note:item.note?t(item.note):'',start:item.start,end:item.end};
+ if(item.ticket!==undefined){const x=data.TICKETS[item.ticket];entry.title=x[1];entry.sub=x[2];entry.start=x[0];}
+ else if(item.train!==undefined){const x=data.TRAINS[item.train];entry.title=x[1];entry.sub=`${x[3]} · ${x[2]}`;entry.start=x[0];}
+ else if(item.stay){const s=(shortTrip?catalog.staysShort:catalog.staysFull)[shortTrip?item.stay.short:item.stay.full];entry.title=s.hotel||s.city;entry.sub=[s.hotel?s.city:'',t('nights',{count:s.nights})].filter(Boolean).join(' · ');entry.start=s.start;entry.end=s.end;}
+ else entry.title=t(item.label);
+ return entry;
+}
+function budgetRows(){return BUDGET.filter(x=>x.person==='both'||x.person===person).map(item=>{
+ const entry=budgetEntry(item),shared=item.person==='both',known=Number.isFinite(item.amount);
+ return {...item,...entry,shared,known,share:known?(shared?item.amount/2:item.amount):null};
+});}
+function budgetRow(row,rates){
+ const [tone,statusKey]=BUDGET_STATUS[row.status]||BUDGET_STATUS.pending;
+ const when=row.end?dateRange(row.start,row.end):date(row.start);
+ const converted=row.known&&rates?convertAmount(row.share,row.currency,currency,rates):null;
+ const amounts=row.known?`<dl class="ledger-amounts"><div><dt>${esc(t('budgetBookingAmount'))}</dt><dd>${esc(money(row.amount,row.currency))}</dd></div><div><dt>${esc(t(row.shared?'budgetShare':'budgetOwnCost'))}</dt><dd>${esc(money(row.share,row.currency))}</dd></div><div><dt>${esc(t('budgetConverted',{currency}))}</dt><dd>${esc(converted===null?'—':money(converted,currency))}</dd></div></dl>`:`<p class="ledger-missing">${esc(t(row.status==='booked'||row.status==='tbc'?'budgetAmountMissing':'budgetNotBooked'))}</p>`;
+ return `<li class="ledger-row" data-status="${row.status}"><div class="ledger-main"><span class="ledger-date">${esc(when)}</span><h4>${esc(row.title)}</h4>${row.sub?`<p class="ledger-sub">${esc(row.sub)}</p>`:''}<p class="ledger-pills"><span class="pill ${tone}">${esc(t(statusKey))}</span>${row.shared?`<span class="pill share">${esc(t('budgetSplit'))}</span>`:''}</p>${row.note?`<p class="ledger-note">${esc(row.note)}</p>`:''}</div>${amounts}</li>`;
+}
+function budgetView(rates){
+ const rows=budgetRows(),sum=list=>list.reduce((n,r)=>n+(rates?convertAmount(r.share,r.currency,currency,rates):0),0);
+ const knownRows=rows.filter(r=>r.known),total=sum(knownRows),paid=sum(knownRows.filter(r=>r.status==='paid')),due=sum(knownRows.filter(r=>r.status!=='paid'));
+ const missing=rows.filter(r=>!r.known&&(r.status==='booked'||r.status==='tbc')).length,unbooked=rows.filter(r=>!r.known&&r.status==='pending').length;
+ const fmt=n=>rates?money(n,currency):'—';
+ const groups=BUDGET_CATEGORIES.map(category=>{
+  const list=rows.filter(r=>r.category===category);if(!list.length)return '';
+  const counted=list.filter(r=>r.known);
+  return `<section class="budget-group" aria-labelledby="budget-${category}"><header class="budget-group-head"><h3 id="budget-${category}">${esc(t(category))}</h3><p class="budget-group-total"><span>${esc(t('budgetSubtotal'))}</span><strong>${esc(counted.length?fmt(sum(counted)):'—')}</strong>${counted.length<list.length?`<small>${esc(t('budgetSubtotalNote',{count:list.length-counted.length}))}</small>`:''}</p></header><ol class="ledger">${list.map(r=>budgetRow(r,rates)).join('')}</ol></section>`;
+ }).join('');
+ const rateLine=rates?rates.map(r=>t('rateDate',{currency:`EUR → ${r.quote}`,date:fullDate(r.date)})).join(' · '):t('rateUnavailable');
+ return `<section class="budget-summary" aria-labelledby="budget-summary-title"><div class="budget-summary-copy"><span class="airfare-kicker">${esc(name)} · 2026</span><h3 id="budget-summary-title">${esc(t('budgetKnownTotal'))}</h3><p class="budget-total">${esc(fmt(total))}</p><dl class="budget-breakdown"><div><dt>${esc(t('budgetPaid'))}</dt><dd>${esc(fmt(paid))}</dd></div><div><dt>${esc(t('budgetDue'))}</dt><dd>${esc(fmt(due))}</dd></div></dl><p class="budget-open">${esc(t('budgetOpenItems',{missing,unbooked}))}</p></div><div class="budget-controls"><label for="budget-currency">${esc(t('budgetDisplayCurrency'))}<select id="budget-currency">${CURRENCIES.map(c=>`<option value="${c}" ${currency===c?'selected':''}>${c} · ${esc(t(c.toLowerCase()))}</option>`).join('')}</select></label><p id="budget-rates" class="caption">${esc(t('ratesUpdated'))} · ${esc(rateLine)}</p><p class="caption">${esc(t('referenceRates'))}</p></div></section>${groups}`+heading(t('budgetNotes'))+`<div class="grid">${card(t('budgetSources'),`<p>${esc(t('budgetSourcesNote'))}</p>`)}${card(t('budgetExcluded'),`<p>${esc(t('budgetExcludedNote'))}</p>`)}</div>`;
+}
+function budget(){return heading(t('budget'),t('budgetNote'))+`<div id="budget-body">${budgetView(storedRates().rows)}</div>`;}
+function initBudget(){
+ let {rows}=storedRates();
+ const body=document.getElementById('budget-body');
+ function render(){body.innerHTML=budgetView(rows);document.getElementById('budget-currency').addEventListener('change',updateCurrency);}
+ function updateCurrency(e){
+  currency=e.target.value;save('iberia.currency',currency);
+  const next=new URL(location.href);next.searchParams.set('currency',currency);history.replaceState(null,'',next.href);
+  document.querySelectorAll('a[href]').forEach(link=>{const u=new URL(link.href,location.href);if(u.origin===location.origin&&u.searchParams.has('page')){u.searchParams.set('currency',currency);link.href=u.href}});
+  render();
+ }
+ document.getElementById('budget-currency').addEventListener('change',updateCurrency);
+ fetchLiveRates().then(fresh=>{if(fresh){rows=fresh;render()}});
+}
 function notes(){return heading(t('notes'))+`<div class="grid">${card(t('packing'),`<ul>${UI.packingList.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>`)}${card(t('portugueseFood'),`<p>${esc(t('portugueseFoodNote'))}</p>`)}${card(t('spanishFood'),`<p>${esc(t('spanishFoodNote'))}</p><p>${esc(t('vinitusNote'))}</p>`)}</div>`;}
 function currencyView(){
  const requestedAmount=params.get('amount');
@@ -109,7 +157,7 @@ function renderShell(){
  document.getElementById('trip-dates').innerHTML=shortTrip?`<span>${esc(dateRange('11-02','11-09'))}</span> <span>＋ ${esc(dateRange('11-24','12-02'))}</span>`:`<span>${esc(dateRange('11-02','12-03'))} · ${esc(t('fullTrip'))}</span>`;
  document.getElementById('preferences').innerHTML=`<label for="language-select">${esc(t('language'))}<select id="language-select">${Object.entries(LANGUAGES).map(([code,label])=>`<option value="${code}" ${code===lang?'selected':''}>${label}</option>`).join('')}</select></label><a class="currency-shortcut" href="${pageUrl('currency')}"><span>${esc(t('currencyShort'))}</span><small>TWD · USD · EUR</small></a>`;
  const nav=document.getElementById('nav');nav.setAttribute('aria-label',t('navigation'));nav.innerHTML=Object.entries(tabs).map(([k,v])=>`<a href="${pageUrl(k)}" ${page===k?'aria-current="page"':''}>${esc(v)}</a>`).join('');
- document.getElementById('main').innerHTML=({overview,days:itinerary,flights,transport,tickets,stays,notes,currency:currencyView}[page])();
+ document.getElementById('main').innerHTML=({overview,days:itinerary,flights,transport,tickets,stays,budget,notes,currency:currencyView}[page])();
  document.getElementById('footer-info').innerHTML=`${esc(t('footerTitle',{name}))}<br>${esc(t('updated',{date:fullDate('2026-10-12')}))}`;
  if(!shortTrip)document.getElementById('footer-info').innerHTML+=`<br><a id="other" class="text-link" href="${pageUrl('overview','','victoria.html')}">${esc(t('otherHandbook',{name:'Victoria'}))}</a>`;
  document.querySelector('.credits summary').textContent=t('photoCredits');
@@ -145,3 +193,4 @@ if(page==='days'){
  window.addEventListener('scroll',()=>{if(!scrollPending){scrollPending=true;requestAnimationFrame(syncVisibleDay)}},{passive:true});
 }
 if(page==='currency')initCurrency();
+if(page==='budget')initBudget();

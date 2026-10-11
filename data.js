@@ -79,3 +79,46 @@ const FULL_FLIGHTS = [
 ];
 
 const FLIGHT_FARES = [{person:"victoria",from:"PHL",to:"LIS",departure:"2026-11-02",return:"2026-11-09",original:{currency:"USD",amount:695.83},cardNotification:{currency:null,amount:22063.37}},{person:"victoria",from:"PHL",to:"BCN",departure:"2026-11-24",return:"2026-12-02",original:{currency:"USD",amount:1226.63},cardNotification:{currency:"TWD",amount:39138}}];
+
+// 預算項目。category：flights 機票、stays 住宿、transport 交通、tickets 門票。
+// person：victoria、andy 為個人費用；both 為共同費用，以兩人平分計算分攤。
+// status：paid 已付款、due 已確認待扣款、booked 已訂但金額待補、tbc 待確認、pending 待訂。
+// amount 為整筆訂單的原幣金額；null 表示金額待補。
+// label、note 對應 locales.js 的 ui 鍵；ticket、train、stay 直接引用門票、交通與住宿資料，名稱與各分頁一致。
+const BUDGET = [
+ {id:'aaLis',category:'flights',person:'victoria',start:'11-02',end:'11-09',label:'budgetAaLis',note:'budgetAaLisNote',status:'paid',amount:FLIGHT_FARES[0].original.amount,currency:FLIGHT_FARES[0].original.currency},
+ {id:'aaBcn',category:'flights',person:'victoria',start:'11-24',end:'12-02',label:'budgetAaBcn',note:'budgetAaBcnNote',status:'paid',amount:FLIGHT_FARES[1].original.amount,currency:FLIGHT_FARES[1].original.currency},
+ {id:'andyLongHaul',category:'flights',person:'andy',start:'11-02',end:'12-03',label:'budgetAndyLongHaul',note:'budgetAndyLongHaulNote',status:'booked',amount:null,currency:'TWD'},
+ {id:'ryanair',category:'flights',person:'andy',start:'11-10',label:'budgetRyanair',note:'budgetRyanairNote',status:'booked',amount:null,currency:'EUR'},
+ {id:'anjoAzul',category:'stays',person:'both',stay:{short:0,full:0},note:'budgetAnjoAzulNote',status:'due',amount:600,currency:'EUR'},
+ {id:'trendyFormosa',category:'stays',person:'both',stay:{short:1,full:1},note:'budgetTrendyFormosaNote',status:'due',amount:102.94,currency:'EUR'},
+ {id:'lisbonAirportStay',category:'stays',person:'victoria',stay:{short:2},note:'budgetLisbonAirportStayNote',status:'pending',amount:null,currency:'EUR'},
+ {id:'portoStay',category:'stays',person:'andy',stay:{full:2},note:'budgetStayPendingNote',status:'tbc',amount:null,currency:'EUR'},
+ {id:'sevillaStay',category:'stays',person:'andy',stay:{full:3},note:'budgetStayPendingNote',status:'pending',amount:null,currency:'EUR'},
+ {id:'granadaStay',category:'stays',person:'andy',stay:{full:4},note:'budgetStayPendingNote',status:'pending',amount:null,currency:'EUR'},
+ {id:'malagaStay',category:'stays',person:'andy',stay:{full:5},note:'budgetStayPendingNote',status:'pending',amount:null,currency:'EUR'},
+ {id:'madridStay',category:'stays',person:'andy',stay:{full:6},note:'budgetStayPendingNote',status:'pending',amount:null,currency:'EUR'},
+ {id:'barcelonaStay',category:'stays',person:'both',stay:{short:3,full:7},note:'budgetStayPendingNote',status:'pending',amount:null,currency:'EUR'},
+ {id:'cpIcVictoria',category:'transport',person:'victoria',train:1,note:'budgetOwnTicketNote',status:'booked',amount:null,currency:'EUR'},
+ {id:'cpIcAndy',category:'transport',person:'andy',train:1,note:'budgetOwnTicketNote',status:'booked',amount:null,currency:'EUR'},
+ {id:'cpAlfa',category:'transport',person:'victoria',train:2,note:'budgetCpAlfaNote',status:'booked',amount:null,currency:'EUR'},
+ {id:'renfeCordoba',category:'transport',person:'andy',train:3,note:'budgetTrainBookedNote',status:'booked',amount:null,currency:'EUR'},
+ {id:'renfeGranada',category:'transport',person:'andy',train:4,note:'budgetTrainBookedNote',status:'booked',amount:null,currency:'EUR'},
+ {id:'renfeMalaga',category:'transport',person:'andy',train:5,note:'budgetTrainBookedNote',status:'booked',amount:null,currency:'EUR'},
+ {id:'ronda',category:'transport',person:'andy',train:6,note:'budgetRondaNote',status:'pending',amount:null,currency:'EUR'},
+ {id:'renfeMadrid',category:'transport',person:'andy',train:7,note:'budgetTrainBookedNote',status:'booked',amount:null,currency:'EUR'},
+ {id:'renfeToledo',category:'transport',person:'andy',train:8,note:'budgetTrainBookedNote',status:'booked',amount:null,currency:'EUR'},
+ {id:'renfeBarcelona',category:'transport',person:'andy',train:9,note:'budgetTrainBookedNote',status:'booked',amount:null,currency:'EUR'},
+ {id:'saoJorge',category:'tickets',person:'both',ticket:0,note:'budgetTicketBoughtNote',status:'booked',amount:null,currency:'EUR'},
+ {id:'jeronimos',category:'tickets',person:'both',ticket:1,note:'budgetJeronimosNote',status:'tbc',amount:null,currency:'EUR'},
+ {id:'penaMouros',category:'tickets',person:'both',ticket:2,note:'budgetTicketBoughtNote',status:'booked',amount:null,currency:'EUR'},
+ {id:'regaleira',category:'tickets',person:'both',ticket:3,note:'budgetRegaleiraNote',status:'booked',amount:null,currency:'EUR'},
+ {id:'bolsa',category:'tickets',person:'andy',ticket:4,note:'budgetBolsaNote',status:'booked',amount:null,currency:'EUR'},
+ {id:'sevillaCathedral',category:'tickets',person:'andy',ticket:5,note:'budgetTicketTbcNote',status:'tbc',amount:null,currency:'EUR'},
+ {id:'alcazar',category:'tickets',person:'andy',ticket:6,note:'budgetTicketPendingNote',status:'pending',amount:null,currency:'EUR'},
+ {id:'alhambra',category:'tickets',person:'andy',ticket:7,note:'budgetTicketPendingNote',status:'pending',amount:null,currency:'EUR'},
+ {id:'sagrada',category:'tickets',person:'both',ticket:8,note:'budgetTicketPendingNote',status:'pending',amount:null,currency:'EUR'},
+ {id:'batllo',category:'tickets',person:'both',ticket:9,note:'budgetTicketTbcNote',status:'tbc',amount:null,currency:'EUR'},
+ {id:'guell',category:'tickets',person:'both',ticket:10,note:'budgetTicketPendingNote',status:'pending',amount:null,currency:'EUR'},
+ {id:'mila',category:'tickets',person:'both',ticket:11,note:'budgetTicketTbcNote',status:'tbc',amount:null,currency:'EUR'}
+];

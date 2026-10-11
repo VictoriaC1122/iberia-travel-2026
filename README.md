@@ -5,11 +5,11 @@ Andy 的完整月行程與 Victoria 的葡萄牙＋巴塞隆納行程，提供�
 - `index.html`：預設開啟 Andy 手冊
 - `victoria.html`：Victoria 手冊
 - `andy.html`：Andy 手冊
-- `data.js`：行程、交通、航班與門票資料
+- `data.js`：行程、交通、航班、門票與預算資料（`BUDGET`：每筆訂單的原幣金額、狀態與分攤方式）
 - `app.js`、`style.css`：互動與版面
 - `typography.css`：思源宋體標題與內文、思源黑體導覽及數字資訊
 - `locales.js`、`preferences.js`：四語翻譯、日期與數字格式、語言偏好
-- `currency.js`、`rates.js`：台幣／美元／歐元換算與參考匯率備援
+- `currency.js`、`rates.js`：台幣／美元／歐元換算與參考匯率備援，預算頁也共用
 - `assets/`：城市照片與授權資訊，部署時需一併上傳
 
 ## GitHub Pages
@@ -32,6 +32,12 @@ python3 -m http.server 8000
 
 頁面包含 `noindex,nofollow` 提示，但這不是存取控制；GitHub Pages 網頁與公開儲存庫可被他人查看。新增資料時請勿加入敏感票券資訊。
 
+## 預算頁
+
+`?page=budget` 依訂單確認信整理機票、住宿、交通與門票費用：每筆列出訂單原幣金額、本人分攤與換算金額，共同費用以兩人平分計算；已訂但尚未登錄票價的項目顯示「金額待補」，未訂購的項目顯示「尚未訂購」，皆不計入合計。顯示幣別可在頁內切換，換算使用與匯率換算頁相同的匯率。
+
+更新金額時修改 `data.js` 的 `BUDGET`：`amount` 填入整筆訂單的原幣金額（`currency` 為 TWD、USD 或 EUR），`status` 使用 `paid`（已付款）、`due`（已確認、待扣款）、`booked`（已訂、金額待補）、`tbc`（待確認）或 `pending`（待訂）；項目名稱與備注對應 `locales.js` 的 `ui` 鍵，四種語言都要更新。
+
 行程中的待確認安排保留原狀；航班、交通與景點時間請於出發前再次確認。
 
 ## 圖片來源
@@ -44,4 +50,4 @@ python3 -m http.server 8000
 
 頁首可切換四種語言，選擇會保存在瀏覽器；`?lang=zh-TW`、`?lang=en`、`?lang=es`、`?lang=pt` 可指定語言。匯率換算頁支援 TWD、USD、EUR 互換，並標示各匯率日期。
 
-匯率來源為 [Frankfurter](https://frankfurter.dev/) 公開 API，載入換算頁時更新；無法連線時使用已儲存或 2026-10-01 的參考匯率。輸入金額只在瀏覽器計算。
+匯率來源為 [Frankfurter](https://frankfurter.dev/) 公開 API，載入換算頁或預算頁時更新；無法連線時使用已儲存或 2026-10-11 的參考匯率。輸入金額只在瀏覽器計算。

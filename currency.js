@@ -12,6 +12,21 @@ function convertAmount(amount,from,to,rows){
  const rates={EUR:1,...Object.fromEntries(rows.map(r=>[r.quote,r.rate]))};
  return amount/rates[from]*rates[to];
 }
+function storedRates(){
+ let cached=null;try{cached=validRates(JSON.parse(saved('iberia.rates','null')))}catch{}
+ return {rows:cached||validRates(RATE_SNAPSHOT),source:cached?'ratesCached':'ratesSnapshot'};
+}
+async function fetchLiveRates(){
+ const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),8000);
+ try{
+  const response=await fetch('https://api.frankfurter.dev/v2/rates?base=EUR&quotes=USD,TWD',{credentials:'omit',referrerPolicy:'no-referrer',signal:controller.signal});
+  if(!response.ok)return null;
+  const fresh=validRates(await response.json());
+  if(fresh)save('iberia.rates',JSON.stringify(fresh));
+  return fresh;
+ }catch{return null}
+ finally{clearTimeout(timeout)}
+}
 function initCurrency(){
  const input=document.getElementById('currency-amount'),base=document.getElementById('currency-base');
  const error=document.getElementById('amount-error'),status=document.getElementById('rate-status'),refresh=document.getElementById('refresh-rates');
