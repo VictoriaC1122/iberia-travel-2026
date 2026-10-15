@@ -137,6 +137,8 @@ const HANDBOOK_LOCALES = {
       "cancelledBookings": "已取消訂單",
       "cancelledBookingsNote": "以下訂單已取消，不列入目前住宿安排；金額為原訂單金額。",
       "bookingTotal": "訂單總額",
+      "stayListingLink": "房源頁面（官網）",
+      "stayConfirmationLink": "訂房確認頁（官網）",
       "originalBookingTotal": "原訂單金額",
       "bookingDates": "訂房日期（入住－退房）",
       "staySource": "依 2026/10/15 提供的訂單截圖更新。金額為整筆訂單，非每人費用。",
@@ -261,7 +263,7 @@ const HANDBOOK_LOCALES = {
         "巴塞隆納",
         "巴塞隆納會合、哥德區",
         "08:27 Andy：Madrid Puerta de Atocha 出發|09:10 Victoria：抵達 BCN|11:44 Andy：抵達 Barcelona Sants|12:30 入住住宿、會合|14:00 哥德區 Gothic Quarter|15:00 巴塞隆納主教座堂|16:00 蘭布拉大道|16:30 博奎利亞市場|19:00 晚餐",
-        "Andy 抵達 Sants 車站；Victoria 抵達 BCN 機場。住宿 Enjoy Apartments（Joan Miro 5）已確認，自 11/24 起訂，抵達即可進房；會合地點與接駁待確認。"
+        "Andy 抵達 Sants 車站；Victoria 抵達 BCN 機場。住宿 Enjoy Apartments（Joan Miro 5）已確認，位於西班牙廣場與 Sants 車站之間，自 11/24 起訂，抵達即可進房；會合地點與接駁待確認。"
       ],
       [
         "11-26",
@@ -397,12 +399,22 @@ const HANDBOOK_LOCALES = {
         "start": "11-24",
         "end": "12-02",
         "nights": 8,
-        "note": "訂單 GY-gEhM6KuE，自 11/24 起共 8 晚；11/24 15:00 起可入住，兩人 11/25 上午抵達即可直接進房。12/02 11:00 前退房。抵達前 7 天會收到線上入住通知：登記兩人資料、支付城市稅、確認抵達時間，全部完成後才會寄入住指引。",
+        "note": "位於擴展區 Eixample，介於西班牙廣場與 Sants 車站之間；兩房兩衛、約 60 m²。訂單 GY-gEhM6KuE，自 11/24 起共 8 晚；11/24 15:00 起可入住，兩人 11/25 上午抵達即可直接進房。12/02 11:00 前退房。抵達前 7 天會收到線上入住通知：登記兩人資料、支付城市稅、確認抵達時間，全部完成後才會寄入住指引。",
         "hotel": "Enjoy Apartments · Joan Miro 5",
         "status": "confirmed",
         "amount": 1214,
         "currency": "EUR",
-        "guests": "Victoria、Andy"
+        "guests": "Victoria、Andy",
+        "links": [
+          {
+            "label": "stayListingLink",
+            "url": "https://www.enjoyapartments.com/properties/joan-miro-5"
+          },
+          {
+            "label": "stayConfirmationLink",
+            "url": "https://www.enjoyapartments.com/confirmation?bookingId=GY-gEhM6KuE&property=Joan%20Miro%205&checkIn=2026-11-24&checkOut=2026-12-02&total=1214"
+          }
+        ]
       }
     ],
     "staysFull": [
@@ -471,12 +483,22 @@ const HANDBOOK_LOCALES = {
         "start": "11-24",
         "end": "12-02",
         "nights": 8,
-        "note": "訂單 GY-gEhM6KuE，自 11/24 起共 8 晚；11/24 15:00 起可入住，兩人 11/25 上午抵達即可直接進房。12/02 11:00 前退房。抵達前 7 天會收到線上入住通知：登記兩人資料、支付城市稅、確認抵達時間，全部完成後才會寄入住指引。",
+        "note": "位於擴展區 Eixample，介於西班牙廣場與 Sants 車站之間；兩房兩衛、約 60 m²。訂單 GY-gEhM6KuE，自 11/24 起共 8 晚；11/24 15:00 起可入住，兩人 11/25 上午抵達即可直接進房。12/02 11:00 前退房。抵達前 7 天會收到線上入住通知：登記兩人資料、支付城市稅、確認抵達時間，全部完成後才會寄入住指引。",
         "hotel": "Enjoy Apartments · Joan Miro 5",
         "status": "confirmed",
         "amount": 1214,
         "currency": "EUR",
-        "guests": "Victoria、Andy"
+        "guests": "Victoria、Andy",
+        "links": [
+          {
+            "label": "stayListingLink",
+            "url": "https://www.enjoyapartments.com/properties/joan-miro-5"
+          },
+          {
+            "label": "stayConfirmationLink",
+            "url": "https://www.enjoyapartments.com/confirmation?bookingId=GY-gEhM6KuE&property=Joan%20Miro%205&checkIn=2026-11-24&checkOut=2026-12-02&total=1214"
+          }
+        ]
       }
     ],
     "cancelledStaysShort": [
@@ -704,7 +726,7 @@ const HANDBOOK_LOCALES = {
         "Barcelona",
         "Reunite in Barcelona and explore the Gothic Quarter",
         "08:27 Andy: depart Madrid Puerta de Atocha|09:10 Victoria: arrive at BCN|11:44 Andy: arrive at Barcelona Sants|12:30 Check in at the apartment and meet up|14:00 Gothic Quarter|15:00 Barcelona Cathedral|16:00 La Rambla|16:30 La Boqueria Market|19:00 Dinner",
-        "Andy arrives at Sants station; Victoria arrives at BCN Airport. Enjoy Apartments (Joan Miro 5) is confirmed from 24 November, so you can go straight in on arrival. Meeting point and transfers still need to be confirmed."
+        "Andy arrives at Sants station; Victoria arrives at BCN Airport. Enjoy Apartments (Joan Miro 5), between Plaça d’Espanya and Sants station, is confirmed from 24 November, so you can go straight in on arrival. Meeting point and transfers still need to be confirmed."
       ],
       [
         "11-26",
@@ -1183,6 +1205,8 @@ const HANDBOOK_LOCALES = {
       "cancelledBookings": "Cancelled bookings",
       "cancelledBookingsNote": "These bookings are cancelled and excluded from current accommodation plans. Amounts are the original booking totals.",
       "bookingTotal": "Booking total",
+      "stayListingLink": "Apartment page (official site)",
+      "stayConfirmationLink": "Booking confirmation (official site)",
       "originalBookingTotal": "Original booking total",
       "bookingDates": "Booking dates (check-in – check-out)",
       "staySource": "Updated from the booking screenshot provided on 15 October 2026. Amounts are per booking, not per person.",
@@ -1307,7 +1331,7 @@ const HANDBOOK_LOCALES = {
         "Barcelona",
         "Reunite in Barcelona and explore the Gothic Quarter",
         "08:27 Andy: depart Madrid Puerta de Atocha|09:10 Victoria: arrive at BCN|11:44 Andy: arrive at Barcelona Sants|12:30 Check in at the apartment and meet up|14:00 Gothic Quarter|15:00 Barcelona Cathedral|16:00 La Rambla|16:30 La Boqueria Market|19:00 Dinner",
-        "Andy arrives at Sants station; Victoria arrives at BCN Airport. Enjoy Apartments (Joan Miro 5) is confirmed from 24 November, so you can go straight in on arrival. Meeting point and transfers still need to be confirmed."
+        "Andy arrives at Sants station; Victoria arrives at BCN Airport. Enjoy Apartments (Joan Miro 5), between Plaça d’Espanya and Sants station, is confirmed from 24 November, so you can go straight in on arrival. Meeting point and transfers still need to be confirmed."
       ],
       [
         "11-26",
@@ -1443,12 +1467,22 @@ const HANDBOOK_LOCALES = {
         "start": "11-24",
         "end": "12-02",
         "nights": 8,
-        "note": "Booking GY-gEhM6KuE, 8 nights from 24 November. Check-in opens at 15:00 on 24 November, so the apartment is ready when you both arrive on the morning of 25 November. Check out by 11:00 on 2 December. Seven days before arrival you will receive the online check-in: register both guests, pay the tourist tax and confirm your arrival time. Arrival instructions are sent only once every step is done.",
+        "note": "In Eixample, between Plaça d’Espanya and Sants station; two bedrooms, two bathrooms, about 60 m². Booking GY-gEhM6KuE, 8 nights from 24 November. Check-in opens at 15:00 on 24 November, so the apartment is ready when you both arrive on the morning of 25 November. Check out by 11:00 on 2 December. Seven days before arrival you will receive the online check-in: register both guests, pay the tourist tax and confirm your arrival time. Arrival instructions are sent only once every step is done.",
         "hotel": "Enjoy Apartments · Joan Miro 5",
         "status": "confirmed",
         "amount": 1214,
         "currency": "EUR",
-        "guests": "Victoria, Andy"
+        "guests": "Victoria, Andy",
+        "links": [
+          {
+            "label": "stayListingLink",
+            "url": "https://www.enjoyapartments.com/properties/joan-miro-5"
+          },
+          {
+            "label": "stayConfirmationLink",
+            "url": "https://www.enjoyapartments.com/confirmation?bookingId=GY-gEhM6KuE&property=Joan%20Miro%205&checkIn=2026-11-24&checkOut=2026-12-02&total=1214"
+          }
+        ]
       }
     ],
     "staysFull": [
@@ -1517,12 +1551,22 @@ const HANDBOOK_LOCALES = {
         "start": "11-24",
         "end": "12-02",
         "nights": 8,
-        "note": "Booking GY-gEhM6KuE, 8 nights from 24 November. Check-in opens at 15:00 on 24 November, so the apartment is ready when you both arrive on the morning of 25 November. Check out by 11:00 on 2 December. Seven days before arrival you will receive the online check-in: register both guests, pay the tourist tax and confirm your arrival time. Arrival instructions are sent only once every step is done.",
+        "note": "In Eixample, between Plaça d’Espanya and Sants station; two bedrooms, two bathrooms, about 60 m². Booking GY-gEhM6KuE, 8 nights from 24 November. Check-in opens at 15:00 on 24 November, so the apartment is ready when you both arrive on the morning of 25 November. Check out by 11:00 on 2 December. Seven days before arrival you will receive the online check-in: register both guests, pay the tourist tax and confirm your arrival time. Arrival instructions are sent only once every step is done.",
         "hotel": "Enjoy Apartments · Joan Miro 5",
         "status": "confirmed",
         "amount": 1214,
         "currency": "EUR",
-        "guests": "Victoria, Andy"
+        "guests": "Victoria, Andy",
+        "links": [
+          {
+            "label": "stayListingLink",
+            "url": "https://www.enjoyapartments.com/properties/joan-miro-5"
+          },
+          {
+            "label": "stayConfirmationLink",
+            "url": "https://www.enjoyapartments.com/confirmation?bookingId=GY-gEhM6KuE&property=Joan%20Miro%205&checkIn=2026-11-24&checkOut=2026-12-02&total=1214"
+          }
+        ]
       }
     ],
     "cancelledStaysShort": [
@@ -1750,7 +1794,7 @@ const HANDBOOK_LOCALES = {
         "Barcelona",
         "Encuentro en Barcelona y barrio Gótico",
         "08:27 Andy: salida de Madrid Puerta de Atocha|09:10 Victoria: llegada a BCN|11:44 Andy: llegada a Barcelona Sants|12:30 Entrar en el apartamento y reunirse|14:00 Barrio Gótico|15:00 Catedral de Barcelona|16:00 La Rambla|16:30 Mercado de la Boquería|19:00 Cena",
-        "Andy llega a la estación de Sants y Victoria al aeropuerto BCN. Enjoy Apartments (Joan Miro 5) confirmado desde el 24 de noviembre, así que se puede entrar nada más llegar. Punto de encuentro y traslados pendientes de confirmar."
+        "Andy llega a la estación de Sants y Victoria al aeropuerto BCN. Enjoy Apartments (Joan Miro 5), entre la plaza de España y la estación de Sants, confirmado desde el 24 de noviembre, así que se puede entrar nada más llegar. Punto de encuentro y traslados pendientes de confirmar."
       ],
       [
         "11-26",
@@ -2229,6 +2273,8 @@ const HANDBOOK_LOCALES = {
       "cancelledBookings": "Reservas canceladas",
       "cancelledBookingsNote": "Estas reservas están canceladas y no forman parte del alojamiento actual. Los importes corresponden a las reservas originales.",
       "bookingTotal": "Total de la reserva",
+      "stayListingLink": "Página del apartamento (web oficial)",
+      "stayConfirmationLink": "Confirmación de la reserva (web oficial)",
       "originalBookingTotal": "Importe original",
       "bookingDates": "Fechas de la reserva (entrada – salida)",
       "staySource": "Actualizado según la captura de reservas facilitada el 15 de octubre de 2026. Importes por reserva, no por persona.",
@@ -2353,7 +2399,7 @@ const HANDBOOK_LOCALES = {
         "Barcelona",
         "Encuentro en Barcelona y barrio Gótico",
         "08:27 Andy: salida de Madrid Puerta de Atocha|09:10 Victoria: llegada a BCN|11:44 Andy: llegada a Barcelona Sants|12:30 Entrar en el apartamento y reunirse|14:00 Barrio Gótico|15:00 Catedral de Barcelona|16:00 La Rambla|16:30 Mercado de la Boquería|19:00 Cena",
-        "Andy llega a la estación de Sants y Victoria al aeropuerto BCN. Enjoy Apartments (Joan Miro 5) confirmado desde el 24 de noviembre, así que se puede entrar nada más llegar. Punto de encuentro y traslados pendientes de confirmar."
+        "Andy llega a la estación de Sants y Victoria al aeropuerto BCN. Enjoy Apartments (Joan Miro 5), entre la plaza de España y la estación de Sants, confirmado desde el 24 de noviembre, así que se puede entrar nada más llegar. Punto de encuentro y traslados pendientes de confirmar."
       ],
       [
         "11-26",
@@ -2489,12 +2535,22 @@ const HANDBOOK_LOCALES = {
         "start": "11-24",
         "end": "12-02",
         "nights": 8,
-        "note": "Reserva GY-gEhM6KuE, 8 noches desde el 24 de noviembre. La entrada es a partir de las 15:00 del día 24, así que el apartamento ya estará disponible al llegar la mañana del 25. Salida antes de las 11:00 del 2 de diciembre. Siete días antes de la llegada se recibirá el check-in online: registrar a los dos huéspedes, pagar la tasa turística y confirmar la hora de llegada. Las instrucciones de llegada solo se envían al completar todos los pasos.",
+        "note": "En el Eixample, entre la plaza de España y la estación de Sants; dos dormitorios, dos baños, unos 60 m². Reserva GY-gEhM6KuE, 8 noches desde el 24 de noviembre. La entrada es a partir de las 15:00 del día 24, así que el apartamento ya estará disponible al llegar la mañana del 25. Salida antes de las 11:00 del 2 de diciembre. Siete días antes de la llegada se recibirá el check-in online: registrar a los dos huéspedes, pagar la tasa turística y confirmar la hora de llegada. Las instrucciones de llegada solo se envían al completar todos los pasos.",
         "hotel": "Enjoy Apartments · Joan Miro 5",
         "status": "confirmed",
         "amount": 1214,
         "currency": "EUR",
-        "guests": "Victoria, Andy"
+        "guests": "Victoria, Andy",
+        "links": [
+          {
+            "label": "stayListingLink",
+            "url": "https://www.enjoyapartments.com/properties/joan-miro-5"
+          },
+          {
+            "label": "stayConfirmationLink",
+            "url": "https://www.enjoyapartments.com/confirmation?bookingId=GY-gEhM6KuE&property=Joan%20Miro%205&checkIn=2026-11-24&checkOut=2026-12-02&total=1214"
+          }
+        ]
       }
     ],
     "staysFull": [
@@ -2563,12 +2619,22 @@ const HANDBOOK_LOCALES = {
         "start": "11-24",
         "end": "12-02",
         "nights": 8,
-        "note": "Reserva GY-gEhM6KuE, 8 noches desde el 24 de noviembre. La entrada es a partir de las 15:00 del día 24, así que el apartamento ya estará disponible al llegar la mañana del 25. Salida antes de las 11:00 del 2 de diciembre. Siete días antes de la llegada se recibirá el check-in online: registrar a los dos huéspedes, pagar la tasa turística y confirmar la hora de llegada. Las instrucciones de llegada solo se envían al completar todos los pasos.",
+        "note": "En el Eixample, entre la plaza de España y la estación de Sants; dos dormitorios, dos baños, unos 60 m². Reserva GY-gEhM6KuE, 8 noches desde el 24 de noviembre. La entrada es a partir de las 15:00 del día 24, así que el apartamento ya estará disponible al llegar la mañana del 25. Salida antes de las 11:00 del 2 de diciembre. Siete días antes de la llegada se recibirá el check-in online: registrar a los dos huéspedes, pagar la tasa turística y confirmar la hora de llegada. Las instrucciones de llegada solo se envían al completar todos los pasos.",
         "hotel": "Enjoy Apartments · Joan Miro 5",
         "status": "confirmed",
         "amount": 1214,
         "currency": "EUR",
-        "guests": "Victoria, Andy"
+        "guests": "Victoria, Andy",
+        "links": [
+          {
+            "label": "stayListingLink",
+            "url": "https://www.enjoyapartments.com/properties/joan-miro-5"
+          },
+          {
+            "label": "stayConfirmationLink",
+            "url": "https://www.enjoyapartments.com/confirmation?bookingId=GY-gEhM6KuE&property=Joan%20Miro%205&checkIn=2026-11-24&checkOut=2026-12-02&total=1214"
+          }
+        ]
       }
     ],
     "cancelledStaysShort": [
@@ -2796,7 +2862,7 @@ const HANDBOOK_LOCALES = {
         "Barcelona",
         "Reencontro em Barcelona e Bairro Gótico",
         "08:27 Andy: partida de Madrid Puerta de Atocha|09:10 Victoria: chegada a BCN|11:44 Andy: chegada a Barcelona Sants|12:30 Entrada no apartamento e reencontro|14:00 Bairro Gótico|15:00 Catedral de Barcelona|16:00 La Rambla|16:30 Mercado da Boqueria|19:00 Jantar",
-        "Andy chega à estação de Sants; Victoria chega ao aeroporto BCN. Enjoy Apartments (Joan Miro 5) confirmado desde 24 de novembro, por isso é possível entrar logo à chegada. Local de encontro e transferes por confirmar."
+        "Andy chega à estação de Sants; Victoria chega ao aeroporto BCN. Enjoy Apartments (Joan Miro 5), entre a Plaça d’Espanya e a estação de Sants, confirmado desde 24 de novembro, por isso é possível entrar logo à chegada. Local de encontro e transferes por confirmar."
       ],
       [
         "11-26",
@@ -3275,6 +3341,8 @@ const HANDBOOK_LOCALES = {
       "cancelledBookings": "Reservas canceladas",
       "cancelledBookingsNote": "Estas reservas foram canceladas e não integram o alojamento atual. Os valores correspondem às reservas originais.",
       "bookingTotal": "Total da reserva",
+      "stayListingLink": "Página do apartamento (site oficial)",
+      "stayConfirmationLink": "Confirmação da reserva (site oficial)",
       "originalBookingTotal": "Valor original",
       "bookingDates": "Datas da reserva (entrada – saída)",
       "staySource": "Atualizado com base na captura das reservas fornecida a 15 de outubro de 2026. Valores por reserva, não por pessoa.",
@@ -3399,7 +3467,7 @@ const HANDBOOK_LOCALES = {
         "Barcelona",
         "Reencontro em Barcelona e Bairro Gótico",
         "08:27 Andy: partida de Madrid Puerta de Atocha|09:10 Victoria: chegada a BCN|11:44 Andy: chegada a Barcelona Sants|12:30 Entrada no apartamento e reencontro|14:00 Bairro Gótico|15:00 Catedral de Barcelona|16:00 La Rambla|16:30 Mercado da Boqueria|19:00 Jantar",
-        "Andy chega à estação de Sants; Victoria chega ao aeroporto BCN. Enjoy Apartments (Joan Miro 5) confirmado desde 24 de novembro, por isso é possível entrar logo à chegada. Local de encontro e transferes por confirmar."
+        "Andy chega à estação de Sants; Victoria chega ao aeroporto BCN. Enjoy Apartments (Joan Miro 5), entre a Plaça d’Espanya e a estação de Sants, confirmado desde 24 de novembro, por isso é possível entrar logo à chegada. Local de encontro e transferes por confirmar."
       ],
       [
         "11-26",
@@ -3535,12 +3603,22 @@ const HANDBOOK_LOCALES = {
         "start": "11-24",
         "end": "12-02",
         "nights": 8,
-        "note": "Reserva GY-gEhM6KuE, 8 noites a partir de 24 de novembro. A entrada é a partir das 15:00 de dia 24, por isso o apartamento já está disponível quando chegarem na manhã de 25. Saída até às 11:00 de 2 de dezembro. Sete dias antes da chegada será enviado o check-in online: registar os dois hóspedes, pagar a taxa turística e confirmar a hora de chegada. As instruções de chegada só são enviadas depois de concluídos todos os passos.",
+        "note": "No Eixample, entre a Plaça d’Espanya e a estação de Sants; dois quartos, duas casas de banho, cerca de 60 m². Reserva GY-gEhM6KuE, 8 noites a partir de 24 de novembro. A entrada é a partir das 15:00 de dia 24, por isso o apartamento já está disponível quando chegarem na manhã de 25. Saída até às 11:00 de 2 de dezembro. Sete dias antes da chegada será enviado o check-in online: registar os dois hóspedes, pagar a taxa turística e confirmar a hora de chegada. As instruções de chegada só são enviadas depois de concluídos todos os passos.",
         "hotel": "Enjoy Apartments · Joan Miro 5",
         "status": "confirmed",
         "amount": 1214,
         "currency": "EUR",
-        "guests": "Victoria, Andy"
+        "guests": "Victoria, Andy",
+        "links": [
+          {
+            "label": "stayListingLink",
+            "url": "https://www.enjoyapartments.com/properties/joan-miro-5"
+          },
+          {
+            "label": "stayConfirmationLink",
+            "url": "https://www.enjoyapartments.com/confirmation?bookingId=GY-gEhM6KuE&property=Joan%20Miro%205&checkIn=2026-11-24&checkOut=2026-12-02&total=1214"
+          }
+        ]
       }
     ],
     "staysFull": [
@@ -3609,12 +3687,22 @@ const HANDBOOK_LOCALES = {
         "start": "11-24",
         "end": "12-02",
         "nights": 8,
-        "note": "Reserva GY-gEhM6KuE, 8 noites a partir de 24 de novembro. A entrada é a partir das 15:00 de dia 24, por isso o apartamento já está disponível quando chegarem na manhã de 25. Saída até às 11:00 de 2 de dezembro. Sete dias antes da chegada será enviado o check-in online: registar os dois hóspedes, pagar a taxa turística e confirmar a hora de chegada. As instruções de chegada só são enviadas depois de concluídos todos os passos.",
+        "note": "No Eixample, entre a Plaça d’Espanya e a estação de Sants; dois quartos, duas casas de banho, cerca de 60 m². Reserva GY-gEhM6KuE, 8 noites a partir de 24 de novembro. A entrada é a partir das 15:00 de dia 24, por isso o apartamento já está disponível quando chegarem na manhã de 25. Saída até às 11:00 de 2 de dezembro. Sete dias antes da chegada será enviado o check-in online: registar os dois hóspedes, pagar a taxa turística e confirmar a hora de chegada. As instruções de chegada só são enviadas depois de concluídos todos os passos.",
         "hotel": "Enjoy Apartments · Joan Miro 5",
         "status": "confirmed",
         "amount": 1214,
         "currency": "EUR",
-        "guests": "Victoria, Andy"
+        "guests": "Victoria, Andy",
+        "links": [
+          {
+            "label": "stayListingLink",
+            "url": "https://www.enjoyapartments.com/properties/joan-miro-5"
+          },
+          {
+            "label": "stayConfirmationLink",
+            "url": "https://www.enjoyapartments.com/confirmation?bookingId=GY-gEhM6KuE&property=Joan%20Miro%205&checkIn=2026-11-24&checkOut=2026-12-02&total=1214"
+          }
+        ]
       }
     ],
     "cancelledStaysShort": [

@@ -636,6 +636,7 @@ body:not([data-lang="zh-TW"]) .day-stamp span{letter-spacing:0}
 .stay-price dd{font-weight:600;color:var(--ink);white-space:nowrap}
 .cancelled-stays .card{background:#f4f3f0}
 .card .stay-city{margin-top:-6px}
+.stay-links{display:flex;flex-wrap:wrap;gap:0 18px;margin:6px 0 0}
 
 /* Budget ledger. */
 .budget-summary{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,1fr);gap:28px;align-items:start;margin:0 0 30px;padding:26px 30px;background:#e9ede4;border:1px solid #cbd3c4;border-radius:12px}
