@@ -139,10 +139,10 @@ const HANDBOOK_LOCALES = {
       "bookingTotal": "訂單總額",
       "originalBookingTotal": "原訂單金額",
       "bookingDates": "訂房日期（入住－退房）",
-      "staySource": "依 2026/10/12 提供的訂單截圖更新。金額為整筆訂單，非每人費用。",
+      "staySource": "依 2026/10/15 提供的訂單截圖更新。金額為整筆訂單，非每人費用。",
       "people": "入住旅客",
-      "staysTicketsNoteShort": "里斯本 11/02–11/07、波多 11/07–11/08 住宿已確認。Victoria 11/08 住宿待重新安排；其餘旅館與票券待確認。",
-      "staysTicketsNoteFull": "里斯本 11/02–11/07、波多 11/07–11/08 住宿已確認。Andy 11/08–11/10 波多住宿及其餘旅館與票券待確認。",
+      "staysTicketsNoteShort": "里斯本 11/02–11/07、波多 11/07–11/08、巴塞隆納 11/24–12/02 住宿已確認。Victoria 11/08 住宿待重新安排；票券待確認。",
+      "staysTicketsNoteFull": "里斯本 11/02–11/07、波多 11/07–11/08、巴塞隆納 11/24–12/02 住宿已確認。Andy 11/08–11/10 波多住宿及其餘旅館與票券待確認。",
       "trainReturnNote": "11/08 Alfa Pendular 134 已訂，18:40 Porto Campanhã → 21:22 Lisboa Oriente。僅 Victoria；抵達後接駁與當晚住宿待安排。",
       "budget": "預算",
       "budgetNote": "依訂單確認信與手冊已登錄的金額整理；共同費用以兩人平分計算分攤。不含餐飲、市區交通與購物。",
@@ -163,7 +163,7 @@ const HANDBOOK_LOCALES = {
       "budgetDisplayCurrency": "顯示幣別",
       "budgetNotes": "說明",
       "budgetSources": "資料來源",
-      "budgetSourcesNote": "機票：美國航空 2026/09/24 與 10/01 的購票收據。住宿：Booking.com 2026/10/11 的訂房確認信，金額為訂單原幣（歐元）。火車：CP 2026/10/11 的購票確認，票價待補。其餘金額依手冊各分頁登錄。",
+      "budgetSourcesNote": "機票：美國航空 2026/09/24 與 10/01 的購票收據。住宿：Booking.com 2026/10/11 的訂房確認信與 Enjoy Apartments 2026/10/15 的訂房確認，金額為訂單原幣（歐元）。火車：CP 2026/10/11 的購票確認，票價待補。其餘金額依手冊各分頁登錄。",
       "budgetExcluded": "未列入",
       "budgetExcludedNote": "餐飲、市區交通、辛特拉火車與 434 公車、機場接駁、購物與旅遊保險未列入。已取消的訂單（法多拜羅阿爾托公寓、Meliá Lisboa Aeroporto）已退款，不計入預算。",
       "budgetAaLis": "美國航空 費城 ⇄ 里斯本 往返（AA 258／AA 259）",
@@ -178,6 +178,9 @@ const HANDBOOK_LOCALES = {
       "budgetTrendyFormosaNote": "房價 € 91.45、加值稅 € 5.49、城市稅 € 6。10/30 前可免費取消；早餐另計每人每日 € 15；Booking.com 顯示約 NT$ 3,666。",
       "budgetLisbonAirportStayNote": "原 Meliá Lisboa Aeroporto 訂單已取消並退款，住宿待重新安排。",
       "budgetStayPendingNote": "旅館待訂，金額未定。",
+      "budgetEnjoyNote": "訂單 GY-gEhM6KuE 已付清 € 1,214（Enjoy Apartments 訂房頁的 Total Paid）；玉山銀行信用卡通知 NT$ 43,828。城市稅不含在內，於線上入住時另付。",
+      "budgetBcnTouristTax": "巴塞隆納城市稅（Enjoy Apartments）",
+      "budgetBcnTouristTaxNote": "每人每晚 € 10.45，最多計 7 晚，17 歲以上適用：€ 10.45 × 2 人 × 7 晚 = € 146.30。抵達前 7 天線上入住時支付。",
       "budgetOwnTicketNote": "兩人同車、各自購票；票價待補。",
       "budgetCpAlfaNote": "僅 Victoria；CP 已購票，票價待補。",
       "budgetTrainBookedNote": "車票已訂，票價待補。",
@@ -257,8 +260,8 @@ const HANDBOOK_LOCALES = {
         "11-25",
         "巴塞隆納",
         "巴塞隆納會合、哥德區",
-        "08:27 Andy：Madrid Puerta de Atocha 出發|09:10 Victoria：抵達 BCN|11:44 Andy：抵達 Barcelona Sants|12:30 住宿放行李、會合|14:00 哥德區 Gothic Quarter|15:00 巴塞隆納主教座堂|16:00 蘭布拉大道|16:30 博奎利亞市場|19:00 晚餐",
-        "Andy 抵達 Sants 車站；Victoria 抵達 BCN 機場。會合地點、接駁與住宿待確認。"
+        "08:27 Andy：Madrid Puerta de Atocha 出發|09:10 Victoria：抵達 BCN|11:44 Andy：抵達 Barcelona Sants|12:30 入住住宿、會合|14:00 哥德區 Gothic Quarter|15:00 巴塞隆納主教座堂|16:00 蘭布拉大道|16:30 博奎利亞市場|19:00 晚餐",
+        "Andy 抵達 Sants 車站；Victoria 抵達 BCN 機場。住宿 Enjoy Apartments（Joan Miro 5）已確認，自 11/24 起訂，抵達即可進房；會合地點與接駁待確認。"
       ],
       [
         "11-26",
@@ -391,10 +394,15 @@ const HANDBOOK_LOCALES = {
       },
       {
         "city": "巴塞隆納",
-        "start": "11-25",
+        "start": "11-24",
         "end": "12-02",
-        "nights": 7,
-        "note": "11/25 寄放行李、會合。"
+        "nights": 8,
+        "note": "訂單 GY-gEhM6KuE，自 11/24 起共 8 晚；11/24 15:00 起可入住，兩人 11/25 上午抵達即可直接進房。12/02 11:00 前退房。抵達前 7 天會收到線上入住通知：登記兩人資料、支付城市稅、確認抵達時間，全部完成後才會寄入住指引。",
+        "hotel": "Enjoy Apartments · Joan Miro 5",
+        "status": "confirmed",
+        "amount": 1214,
+        "currency": "EUR",
+        "guests": "Victoria、Andy"
       }
     ],
     "staysFull": [
@@ -460,10 +468,15 @@ const HANDBOOK_LOCALES = {
       },
       {
         "city": "巴塞隆納",
-        "start": "11-25",
+        "start": "11-24",
         "end": "12-02",
-        "nights": 7,
-        "note": "最後一晚 12/01。"
+        "nights": 8,
+        "note": "訂單 GY-gEhM6KuE，自 11/24 起共 8 晚；11/24 15:00 起可入住，兩人 11/25 上午抵達即可直接進房。12/02 11:00 前退房。抵達前 7 天會收到線上入住通知：登記兩人資料、支付城市稅、確認抵達時間，全部完成後才會寄入住指引。",
+        "hotel": "Enjoy Apartments · Joan Miro 5",
+        "status": "confirmed",
+        "amount": 1214,
+        "currency": "EUR",
+        "guests": "Victoria、Andy"
       }
     ],
     "cancelledStaysShort": [
@@ -690,8 +703,8 @@ const HANDBOOK_LOCALES = {
         "11-25",
         "Barcelona",
         "Reunite in Barcelona and explore the Gothic Quarter",
-        "08:27 Andy: depart Madrid Puerta de Atocha|09:10 Victoria: arrive at BCN|11:44 Andy: arrive at Barcelona Sants|12:30 Drop off luggage at the accommodation and meet up|14:00 Gothic Quarter|15:00 Barcelona Cathedral|16:00 La Rambla|16:30 La Boqueria Market|19:00 Dinner",
-        "Andy arrives at Sants station; Victoria arrives at BCN Airport. Meeting point, transfers and accommodation still need to be confirmed."
+        "08:27 Andy: depart Madrid Puerta de Atocha|09:10 Victoria: arrive at BCN|11:44 Andy: arrive at Barcelona Sants|12:30 Check in at the apartment and meet up|14:00 Gothic Quarter|15:00 Barcelona Cathedral|16:00 La Rambla|16:30 La Boqueria Market|19:00 Dinner",
+        "Andy arrives at Sants station; Victoria arrives at BCN Airport. Enjoy Apartments (Joan Miro 5) is confirmed from 24 November, so you can go straight in on arrival. Meeting point and transfers still need to be confirmed."
       ],
       [
         "11-26",
@@ -739,8 +752,8 @@ const HANDBOOK_LOCALES = {
         "12-02",
         "Return journey",
         "Barcelona → Doha",
-        "11:30 Andy leaves the accommodation, original plan|12:30 Andy heads to BCN Airport, original plan|15:20 Andy: depart BCN for Doha|23:20 Andy: arrive at DOH",
-        "Andy's departure from the accommodation and airport transfer times still need to be confirmed; flight times are local."
+        "11:00 Check out; luggage can be left free at the Enjoy Apartments office (weekdays)|12:30 Andy heads to BCN Airport, original plan|15:20 Andy: depart BCN for Doha|23:20 Andy: arrive at DOH",
+        "2 December is a Wednesday, so the free weekday luggage storage at the office is available. Andy’s airport transfer time still needs to be confirmed; flight times are local."
       ],
       [
         "12-03",
@@ -1172,10 +1185,10 @@ const HANDBOOK_LOCALES = {
       "bookingTotal": "Booking total",
       "originalBookingTotal": "Original booking total",
       "bookingDates": "Booking dates (check-in – check-out)",
-      "staySource": "Updated from the booking screenshot provided on 12 October 2026. Amounts are per booking, not per person.",
+      "staySource": "Updated from the booking screenshot provided on 15 October 2026. Amounts are per booking, not per person.",
       "people": "Guests",
-      "staysTicketsNoteShort": "Lisbon, 2–7 November, and Porto, 7–8 November, are confirmed. Victoria’s 8 November stay needs to be rearranged; remaining hotels and tickets still need confirmation.",
-      "staysTicketsNoteFull": "Lisbon, 2–7 November, and Porto, 7–8 November, are confirmed. Andy’s Porto stay for 8–10 November and remaining hotels and tickets still need confirmation.",
+      "staysTicketsNoteShort": "Lisbon, 2–7 November, Porto, 7–8 November, and Barcelona, 24 November–2 December, are confirmed. Victoria’s 8 November stay needs to be rearranged; tickets still need confirmation.",
+      "staysTicketsNoteFull": "Lisbon, 2–7 November, Porto, 7–8 November, and Barcelona, 24 November–2 December, are confirmed. Andy’s Porto stay for 8–10 November and remaining hotels and tickets still need confirmation.",
       "trainReturnNote": "8 November: Alfa Pendular 134 booked, 18:40 Porto Campanhã → 21:22 Lisboa Oriente. Victoria only; the onward transfer and accommodation are still to be arranged.",
       "budget": "Budget",
       "budgetNote": "Compiled from booking confirmations and the amounts already recorded in this handbook. Shared costs are split equally between the two of you. Meals, local transport and shopping are not included.",
@@ -1196,7 +1209,7 @@ const HANDBOOK_LOCALES = {
       "budgetDisplayCurrency": "Display currency",
       "budgetNotes": "Notes",
       "budgetSources": "Sources",
-      "budgetSourcesNote": "Flights: American Airlines receipts of 24 September and 1 October 2026. Accommodation: Booking.com confirmations of 11 October 2026, in the booking currency (euro). Trains: CP purchase confirmation of 11 October 2026; fares to be added. Other amounts follow the handbook pages.",
+      "budgetSourcesNote": "Flights: American Airlines receipts of 24 September and 1 October 2026. Accommodation: Booking.com confirmations of 11 October 2026 and the Enjoy Apartments confirmation of 15 October 2026, in the booking currency (euro). Trains: CP purchase confirmation of 11 October 2026; fares to be added. Other amounts follow the handbook pages.",
       "budgetExcluded": "Not included",
       "budgetExcludedNote": "Meals, local transport, the Sintra train and bus 434, airport transfers, shopping and travel insurance are not included. The cancelled bookings (Fado Bairro Alto Apartments and Meliá Lisboa Aeroporto) were refunded and are not counted.",
       "budgetAaLis": "American Airlines Philadelphia ⇄ Lisbon, round trip (AA 258 / AA 259)",
@@ -1211,6 +1224,9 @@ const HANDBOOK_LOCALES = {
       "budgetTrendyFormosaNote": "Apartment € 91.45, VAT € 5.49, city tax € 6. Free cancellation until 30 October; breakfast is € 15 per person per day extra. Shown by Booking.com as about NT$ 3,666.",
       "budgetLisbonAirportStayNote": "The original Meliá Lisboa Aeroporto booking was cancelled and refunded; a new stay still needs to be arranged.",
       "budgetStayPendingNote": "Hotel to be booked; amount unknown.",
+      "budgetEnjoyNote": "Booking GY-gEhM6KuE paid in full: € 1,214 (Total Paid on the Enjoy Apartments booking page). E.SUN Bank card notification NT$ 43,828. Tourist tax is not included and is paid separately at online check-in.",
+      "budgetBcnTouristTax": "Barcelona tourist tax (Enjoy Apartments)",
+      "budgetBcnTouristTaxNote": "€ 10.45 per person per night, up to 7 nights, guests aged 17+: € 10.45 × 2 guests × 7 nights = € 146.30. Paid at online check-in, seven days before arrival.",
       "budgetOwnTicketNote": "Same train, tickets bought separately; fare to be added.",
       "budgetCpAlfaNote": "Victoria only; ticket bought from CP, fare to be added.",
       "budgetTrainBookedNote": "Ticket booked; fare to be added.",
@@ -1290,8 +1306,8 @@ const HANDBOOK_LOCALES = {
         "11-25",
         "Barcelona",
         "Reunite in Barcelona and explore the Gothic Quarter",
-        "08:27 Andy: depart Madrid Puerta de Atocha|09:10 Victoria: arrive at BCN|11:44 Andy: arrive at Barcelona Sants|12:30 Drop off luggage at the accommodation and meet up|14:00 Gothic Quarter|15:00 Barcelona Cathedral|16:00 La Rambla|16:30 La Boqueria Market|19:00 Dinner",
-        "Andy arrives at Sants station; Victoria arrives at BCN Airport. Meeting point, transfers and accommodation still need to be confirmed."
+        "08:27 Andy: depart Madrid Puerta de Atocha|09:10 Victoria: arrive at BCN|11:44 Andy: arrive at Barcelona Sants|12:30 Check in at the apartment and meet up|14:00 Gothic Quarter|15:00 Barcelona Cathedral|16:00 La Rambla|16:30 La Boqueria Market|19:00 Dinner",
+        "Andy arrives at Sants station; Victoria arrives at BCN Airport. Enjoy Apartments (Joan Miro 5) is confirmed from 24 November, so you can go straight in on arrival. Meeting point and transfers still need to be confirmed."
       ],
       [
         "11-26",
@@ -1424,10 +1440,15 @@ const HANDBOOK_LOCALES = {
       },
       {
         "city": "Barcelona",
-        "start": "11-25",
+        "start": "11-24",
         "end": "12-02",
-        "nights": 7,
-        "note": "Drop off luggage and meet up on November 25."
+        "nights": 8,
+        "note": "Booking GY-gEhM6KuE, 8 nights from 24 November. Check-in opens at 15:00 on 24 November, so the apartment is ready when you both arrive on the morning of 25 November. Check out by 11:00 on 2 December. Seven days before arrival you will receive the online check-in: register both guests, pay the tourist tax and confirm your arrival time. Arrival instructions are sent only once every step is done.",
+        "hotel": "Enjoy Apartments · Joan Miro 5",
+        "status": "confirmed",
+        "amount": 1214,
+        "currency": "EUR",
+        "guests": "Victoria, Andy"
       }
     ],
     "staysFull": [
@@ -1493,10 +1514,15 @@ const HANDBOOK_LOCALES = {
       },
       {
         "city": "Barcelona",
-        "start": "11-25",
+        "start": "11-24",
         "end": "12-02",
-        "nights": 7,
-        "note": "Final night: December 1."
+        "nights": 8,
+        "note": "Booking GY-gEhM6KuE, 8 nights from 24 November. Check-in opens at 15:00 on 24 November, so the apartment is ready when you both arrive on the morning of 25 November. Check out by 11:00 on 2 December. Seven days before arrival you will receive the online check-in: register both guests, pay the tourist tax and confirm your arrival time. Arrival instructions are sent only once every step is done.",
+        "hotel": "Enjoy Apartments · Joan Miro 5",
+        "status": "confirmed",
+        "amount": 1214,
+        "currency": "EUR",
+        "guests": "Victoria, Andy"
       }
     ],
     "cancelledStaysShort": [
@@ -1723,8 +1749,8 @@ const HANDBOOK_LOCALES = {
         "11-25",
         "Barcelona",
         "Encuentro en Barcelona y barrio Gótico",
-        "08:27 Andy: salida de Madrid Puerta de Atocha|09:10 Victoria: llegada a BCN|11:44 Andy: llegada a Barcelona Sants|12:30 Dejar el equipaje en el alojamiento y reunirse|14:00 Barrio Gótico|15:00 Catedral de Barcelona|16:00 La Rambla|16:30 Mercado de la Boquería|19:00 Cena",
-        "Andy llega a la estación de Sants y Victoria al aeropuerto BCN. Punto de encuentro, traslados y alojamiento pendientes de confirmar."
+        "08:27 Andy: salida de Madrid Puerta de Atocha|09:10 Victoria: llegada a BCN|11:44 Andy: llegada a Barcelona Sants|12:30 Entrar en el apartamento y reunirse|14:00 Barrio Gótico|15:00 Catedral de Barcelona|16:00 La Rambla|16:30 Mercado de la Boquería|19:00 Cena",
+        "Andy llega a la estación de Sants y Victoria al aeropuerto BCN. Enjoy Apartments (Joan Miro 5) confirmado desde el 24 de noviembre, así que se puede entrar nada más llegar. Punto de encuentro y traslados pendientes de confirmar."
       ],
       [
         "11-26",
@@ -1772,8 +1798,8 @@ const HANDBOOK_LOCALES = {
         "12-02",
         "Regreso",
         "Barcelona → Doha",
-        "11:30 Andy deja el alojamiento, según el plan original|12:30 Andy sale hacia el aeropuerto BCN, según el plan original|15:20 Andy: salida de BCN hacia Doha|23:20 Andy: llegada a DOH",
-        "Horas de salida del alojamiento y de traslado al aeropuerto de Andy pendientes de confirmar. Los horarios de los vuelos son locales."
+        "11:00 Salida del apartamento; consigna gratuita en la oficina de Enjoy Apartments (entre semana)|12:30 Andy sale hacia el aeropuerto BCN, según el plan original|15:20 Andy: salida de BCN hacia Doha|23:20 Andy: llegada a DOH",
+        "El 2 de diciembre es miércoles, así que se puede usar la consigna gratuita de la oficina. Hora de traslado al aeropuerto de Andy pendiente de confirmar. Los horarios de los vuelos son locales."
       ],
       [
         "12-03",
@@ -2205,10 +2231,10 @@ const HANDBOOK_LOCALES = {
       "bookingTotal": "Total de la reserva",
       "originalBookingTotal": "Importe original",
       "bookingDates": "Fechas de la reserva (entrada – salida)",
-      "staySource": "Actualizado según la captura de reservas facilitada el 12 de octubre de 2026. Importes por reserva, no por persona.",
+      "staySource": "Actualizado según la captura de reservas facilitada el 15 de octubre de 2026. Importes por reserva, no por persona.",
       "people": "Huéspedes",
-      "staysTicketsNoteShort": "Confirmados Lisboa del 2 al 7 y Oporto del 7 al 8 de noviembre. Hay que reorganizar la noche del 8 de Victoria; quedan hoteles y entradas por confirmar.",
-      "staysTicketsNoteFull": "Confirmados Lisboa del 2 al 7 y Oporto del 7 al 8 de noviembre. Pendientes el alojamiento de Andy en Oporto del 8 al 10 y los demás hoteles y entradas.",
+      "staysTicketsNoteShort": "Confirmados Lisboa del 2 al 7 y Oporto del 7 al 8 de noviembre, y Barcelona del 24 de noviembre al 2 de diciembre. Hay que reorganizar la noche del 8 de Victoria; quedan entradas por confirmar.",
+      "staysTicketsNoteFull": "Confirmados Lisboa del 2 al 7 y Oporto del 7 al 8 de noviembre, y Barcelona del 24 de noviembre al 2 de diciembre. Pendientes el alojamiento de Andy en Oporto del 8 al 10 y los demás hoteles y entradas.",
       "trainReturnNote": "8 de noviembre: Alfa Pendular 134 reservado, 18:40 Porto Campanhã → 21:22 Lisboa Oriente. Solo Victoria; traslado posterior y alojamiento pendientes.",
       "budget": "Presupuesto",
       "budgetNote": "Elaborado a partir de las confirmaciones de reserva y de los importes ya registrados en esta guía. Los gastos comunes se reparten a partes iguales entre los dos. No incluye comidas, transporte urbano ni compras.",
@@ -2229,7 +2255,7 @@ const HANDBOOK_LOCALES = {
       "budgetDisplayCurrency": "Moneda de visualización",
       "budgetNotes": "Notas",
       "budgetSources": "Fuentes",
-      "budgetSourcesNote": "Vuelos: recibos de American Airlines del 24 de septiembre y del 1 de octubre de 2026. Alojamiento: confirmaciones de Booking.com del 11 de octubre de 2026, en la moneda de la reserva (euro). Trenes: confirmación de compra de CP del 11 de octubre de 2026; tarifas por añadir. El resto de importes sigue las páginas de la guía.",
+      "budgetSourcesNote": "Vuelos: recibos de American Airlines del 24 de septiembre y del 1 de octubre de 2026. Alojamiento: confirmaciones de Booking.com del 11 de octubre de 2026 y de Enjoy Apartments del 15 de octubre de 2026, en la moneda de la reserva (euro). Trenes: confirmación de compra de CP del 11 de octubre de 2026; tarifas por añadir. El resto de importes sigue las páginas de la guía.",
       "budgetExcluded": "No incluido",
       "budgetExcludedNote": "No se incluyen comidas, transporte urbano, el tren a Sintra y el autobús 434, traslados al aeropuerto, compras ni seguro de viaje. Las reservas canceladas (Fado Bairro Alto Apartments y Meliá Lisboa Aeroporto) fueron reembolsadas y no se contabilizan.",
       "budgetAaLis": "American Airlines Filadelfia ⇄ Lisboa, ida y vuelta (AA 258 / AA 259)",
@@ -2244,6 +2270,9 @@ const HANDBOOK_LOCALES = {
       "budgetTrendyFormosaNote": "Apartamento € 91,45, IVA € 5,49, tasa turística € 6. Cancelación gratuita hasta el 30 de octubre; el desayuno cuesta € 15 por persona y día aparte. Booking.com lo muestra como unos NT$ 3.666.",
       "budgetLisbonAirportStayNote": "La reserva original en el Meliá Lisboa Aeroporto se canceló y se reembolsó; queda por organizar un nuevo alojamiento.",
       "budgetStayPendingNote": "Hotel por reservar; importe por determinar.",
+      "budgetEnjoyNote": "Reserva GY-gEhM6KuE pagada por completo: € 1.214 (Total Paid en la página de reserva de Enjoy Apartments). Aviso de la tarjeta de E.SUN Bank: NT$ 43.828. La tasa turística no está incluida y se paga aparte en el check-in online.",
+      "budgetBcnTouristTax": "Tasa turística de Barcelona (Enjoy Apartments)",
+      "budgetBcnTouristTaxNote": "€ 10,45 por persona y noche, máximo 7 noches, mayores de 17 años: € 10,45 × 2 huéspedes × 7 noches = € 146,30. Se paga en el check-in online, siete días antes de la llegada.",
       "budgetOwnTicketNote": "Mismo tren, billetes comprados por separado; tarifa por añadir.",
       "budgetCpAlfaNote": "Solo Victoria; billete comprado en CP, tarifa por añadir.",
       "budgetTrainBookedNote": "Billete reservado; tarifa por añadir.",
@@ -2323,8 +2352,8 @@ const HANDBOOK_LOCALES = {
         "11-25",
         "Barcelona",
         "Encuentro en Barcelona y barrio Gótico",
-        "08:27 Andy: salida de Madrid Puerta de Atocha|09:10 Victoria: llegada a BCN|11:44 Andy: llegada a Barcelona Sants|12:30 Dejar el equipaje en el alojamiento y reunirse|14:00 Barrio Gótico|15:00 Catedral de Barcelona|16:00 La Rambla|16:30 Mercado de la Boquería|19:00 Cena",
-        "Andy llega a la estación de Sants y Victoria al aeropuerto BCN. Punto de encuentro, traslados y alojamiento pendientes de confirmar."
+        "08:27 Andy: salida de Madrid Puerta de Atocha|09:10 Victoria: llegada a BCN|11:44 Andy: llegada a Barcelona Sants|12:30 Entrar en el apartamento y reunirse|14:00 Barrio Gótico|15:00 Catedral de Barcelona|16:00 La Rambla|16:30 Mercado de la Boquería|19:00 Cena",
+        "Andy llega a la estación de Sants y Victoria al aeropuerto BCN. Enjoy Apartments (Joan Miro 5) confirmado desde el 24 de noviembre, así que se puede entrar nada más llegar. Punto de encuentro y traslados pendientes de confirmar."
       ],
       [
         "11-26",
@@ -2457,10 +2486,15 @@ const HANDBOOK_LOCALES = {
       },
       {
         "city": "Barcelona",
-        "start": "11-25",
+        "start": "11-24",
         "end": "12-02",
-        "nights": 7,
-        "note": "El 25 de noviembre, dejar el equipaje y reunirse."
+        "nights": 8,
+        "note": "Reserva GY-gEhM6KuE, 8 noches desde el 24 de noviembre. La entrada es a partir de las 15:00 del día 24, así que el apartamento ya estará disponible al llegar la mañana del 25. Salida antes de las 11:00 del 2 de diciembre. Siete días antes de la llegada se recibirá el check-in online: registrar a los dos huéspedes, pagar la tasa turística y confirmar la hora de llegada. Las instrucciones de llegada solo se envían al completar todos los pasos.",
+        "hotel": "Enjoy Apartments · Joan Miro 5",
+        "status": "confirmed",
+        "amount": 1214,
+        "currency": "EUR",
+        "guests": "Victoria, Andy"
       }
     ],
     "staysFull": [
@@ -2526,10 +2560,15 @@ const HANDBOOK_LOCALES = {
       },
       {
         "city": "Barcelona",
-        "start": "11-25",
+        "start": "11-24",
         "end": "12-02",
-        "nights": 7,
-        "note": "Última noche: 1 de diciembre."
+        "nights": 8,
+        "note": "Reserva GY-gEhM6KuE, 8 noches desde el 24 de noviembre. La entrada es a partir de las 15:00 del día 24, así que el apartamento ya estará disponible al llegar la mañana del 25. Salida antes de las 11:00 del 2 de diciembre. Siete días antes de la llegada se recibirá el check-in online: registrar a los dos huéspedes, pagar la tasa turística y confirmar la hora de llegada. Las instrucciones de llegada solo se envían al completar todos los pasos.",
+        "hotel": "Enjoy Apartments · Joan Miro 5",
+        "status": "confirmed",
+        "amount": 1214,
+        "currency": "EUR",
+        "guests": "Victoria, Andy"
       }
     ],
     "cancelledStaysShort": [
@@ -2756,8 +2795,8 @@ const HANDBOOK_LOCALES = {
         "11-25",
         "Barcelona",
         "Reencontro em Barcelona e Bairro Gótico",
-        "08:27 Andy: partida de Madrid Puerta de Atocha|09:10 Victoria: chegada a BCN|11:44 Andy: chegada a Barcelona Sants|12:30 Deixar as malas no alojamento e reencontro|14:00 Bairro Gótico|15:00 Catedral de Barcelona|16:00 La Rambla|16:30 Mercado da Boqueria|19:00 Jantar",
-        "Andy chega à estação de Sants; Victoria chega ao aeroporto BCN. Local de encontro, transferes e alojamento por confirmar."
+        "08:27 Andy: partida de Madrid Puerta de Atocha|09:10 Victoria: chegada a BCN|11:44 Andy: chegada a Barcelona Sants|12:30 Entrada no apartamento e reencontro|14:00 Bairro Gótico|15:00 Catedral de Barcelona|16:00 La Rambla|16:30 Mercado da Boqueria|19:00 Jantar",
+        "Andy chega à estação de Sants; Victoria chega ao aeroporto BCN. Enjoy Apartments (Joan Miro 5) confirmado desde 24 de novembro, por isso é possível entrar logo à chegada. Local de encontro e transferes por confirmar."
       ],
       [
         "11-26",
@@ -2805,8 +2844,8 @@ const HANDBOOK_LOCALES = {
         "12-02",
         "Regresso",
         "Barcelona → Doha",
-        "11:30 Andy sai do alojamento, conforme o plano original|12:30 Andy segue para o aeroporto BCN, conforme o plano original|15:20 Andy: partida de BCN para Doha|23:20 Andy: chegada a DOH",
-        "Hora de saída do alojamento e transporte de Andy para o aeroporto por confirmar. Horários dos voos em hora local."
+        "11:00 Check-out; as malas podem ficar gratuitamente no escritório da Enjoy Apartments (dias úteis)|12:30 Andy segue para o aeroporto BCN, conforme o plano original|15:20 Andy: partida de BCN para Doha|23:20 Andy: chegada a DOH",
+        "2 de dezembro é quarta-feira, por isso o depósito de bagagens gratuito do escritório está disponível. Hora do transporte de Andy para o aeroporto por confirmar. Horários dos voos em hora local."
       ],
       [
         "12-03",
@@ -3238,10 +3277,10 @@ const HANDBOOK_LOCALES = {
       "bookingTotal": "Total da reserva",
       "originalBookingTotal": "Valor original",
       "bookingDates": "Datas da reserva (entrada – saída)",
-      "staySource": "Atualizado com base na captura das reservas fornecida a 12 de outubro de 2026. Valores por reserva, não por pessoa.",
+      "staySource": "Atualizado com base na captura das reservas fornecida a 15 de outubro de 2026. Valores por reserva, não por pessoa.",
       "people": "Hóspedes",
-      "staysTicketsNoteShort": "Confirmados Lisboa de 2 a 7 e Porto de 7 a 8 de novembro. É necessário reorganizar a noite de 8 de novembro de Victoria; restantes alojamentos e bilhetes por confirmar.",
-      "staysTicketsNoteFull": "Confirmados Lisboa de 2 a 7 e Porto de 7 a 8 de novembro. Alojamento de Andy no Porto de 8 a 10 e restantes alojamentos e bilhetes por confirmar.",
+      "staysTicketsNoteShort": "Confirmados Lisboa de 2 a 7 e Porto de 7 a 8 de novembro, e Barcelona de 24 de novembro a 2 de dezembro. É necessário reorganizar a noite de 8 de novembro de Victoria; bilhetes por confirmar.",
+      "staysTicketsNoteFull": "Confirmados Lisboa de 2 a 7 e Porto de 7 a 8 de novembro, e Barcelona de 24 de novembro a 2 de dezembro. Alojamento de Andy no Porto de 8 a 10 e restantes alojamentos e bilhetes por confirmar.",
       "trainReturnNote": "8 de novembro: Alfa Pendular 134 reservado, 18:40 Porto Campanhã → 21:22 Lisboa Oriente. Apenas Victoria; transporte após a chegada e alojamento por organizar.",
       "budget": "Orçamento",
       "budgetNote": "Elaborado a partir das confirmações de reserva e dos valores já registados neste guia. As despesas comuns são divididas em partes iguais entre os dois. Não inclui refeições, transportes urbanos nem compras.",
@@ -3262,7 +3301,7 @@ const HANDBOOK_LOCALES = {
       "budgetDisplayCurrency": "Moeda de apresentação",
       "budgetNotes": "Notas",
       "budgetSources": "Fontes",
-      "budgetSourcesNote": "Voos: recibos da American Airlines de 24 de setembro e 1 de outubro de 2026. Alojamento: confirmações da Booking.com de 11 de outubro de 2026, na moeda da reserva (euro). Comboios: confirmação de compra da CP de 11 de outubro de 2026; tarifas por acrescentar. Os restantes valores seguem as páginas do guia.",
+      "budgetSourcesNote": "Voos: recibos da American Airlines de 24 de setembro e 1 de outubro de 2026. Alojamento: confirmações da Booking.com de 11 de outubro de 2026 e da Enjoy Apartments de 15 de outubro de 2026, na moeda da reserva (euro). Comboios: confirmação de compra da CP de 11 de outubro de 2026; tarifas por acrescentar. Os restantes valores seguem as páginas do guia.",
       "budgetExcluded": "Não incluído",
       "budgetExcludedNote": "Não estão incluídos refeições, transportes urbanos, o comboio para Sintra e o autocarro 434, transferes de aeroporto, compras e seguro de viagem. As reservas canceladas (Fado Bairro Alto Apartments e Meliá Lisboa Aeroporto) foram reembolsadas e não são contabilizadas.",
       "budgetAaLis": "American Airlines Filadélfia ⇄ Lisboa, ida e volta (AA 258 / AA 259)",
@@ -3277,6 +3316,9 @@ const HANDBOOK_LOCALES = {
       "budgetTrendyFormosaNote": "Apartamento € 91,45, IVA € 5,49, taxa turística € 6. Cancelamento gratuito até 30 de outubro; pequeno-almoço à parte, € 15 por pessoa e por dia. Apresentado pela Booking.com como cerca de NT$ 3 666.",
       "budgetLisbonAirportStayNote": "A reserva original no Meliá Lisboa Aeroporto foi cancelada e reembolsada; falta organizar um novo alojamento.",
       "budgetStayPendingNote": "Alojamento por reservar; valor por definir.",
+      "budgetEnjoyNote": "Reserva GY-gEhM6KuE paga na totalidade: € 1214 (Total Paid na página de reserva da Enjoy Apartments). Notificação do cartão do E.SUN Bank: NT$ 43 828. A taxa turística não está incluída e é paga à parte no check-in online.",
+      "budgetBcnTouristTax": "Taxa turística de Barcelona (Enjoy Apartments)",
+      "budgetBcnTouristTaxNote": "€ 10,45 por pessoa e por noite, máximo de 7 noites, hóspedes com 17 anos ou mais: € 10,45 × 2 hóspedes × 7 noites = € 146,30. Pago no check-in online, sete dias antes da chegada.",
       "budgetOwnTicketNote": "Mesmo comboio, bilhetes comprados separadamente; tarifa por acrescentar.",
       "budgetCpAlfaNote": "Apenas Victoria; bilhete comprado na CP, tarifa por acrescentar.",
       "budgetTrainBookedNote": "Bilhete reservado; tarifa por acrescentar.",
@@ -3356,8 +3398,8 @@ const HANDBOOK_LOCALES = {
         "11-25",
         "Barcelona",
         "Reencontro em Barcelona e Bairro Gótico",
-        "08:27 Andy: partida de Madrid Puerta de Atocha|09:10 Victoria: chegada a BCN|11:44 Andy: chegada a Barcelona Sants|12:30 Deixar as malas no alojamento e reencontro|14:00 Bairro Gótico|15:00 Catedral de Barcelona|16:00 La Rambla|16:30 Mercado da Boqueria|19:00 Jantar",
-        "Andy chega à estação de Sants; Victoria chega ao aeroporto BCN. Local de encontro, transferes e alojamento por confirmar."
+        "08:27 Andy: partida de Madrid Puerta de Atocha|09:10 Victoria: chegada a BCN|11:44 Andy: chegada a Barcelona Sants|12:30 Entrada no apartamento e reencontro|14:00 Bairro Gótico|15:00 Catedral de Barcelona|16:00 La Rambla|16:30 Mercado da Boqueria|19:00 Jantar",
+        "Andy chega à estação de Sants; Victoria chega ao aeroporto BCN. Enjoy Apartments (Joan Miro 5) confirmado desde 24 de novembro, por isso é possível entrar logo à chegada. Local de encontro e transferes por confirmar."
       ],
       [
         "11-26",
@@ -3490,10 +3532,15 @@ const HANDBOOK_LOCALES = {
       },
       {
         "city": "Barcelona",
-        "start": "11-25",
+        "start": "11-24",
         "end": "12-02",
-        "nights": 7,
-        "note": "Deixar as malas e reencontro a 25 de novembro."
+        "nights": 8,
+        "note": "Reserva GY-gEhM6KuE, 8 noites a partir de 24 de novembro. A entrada é a partir das 15:00 de dia 24, por isso o apartamento já está disponível quando chegarem na manhã de 25. Saída até às 11:00 de 2 de dezembro. Sete dias antes da chegada será enviado o check-in online: registar os dois hóspedes, pagar a taxa turística e confirmar a hora de chegada. As instruções de chegada só são enviadas depois de concluídos todos os passos.",
+        "hotel": "Enjoy Apartments · Joan Miro 5",
+        "status": "confirmed",
+        "amount": 1214,
+        "currency": "EUR",
+        "guests": "Victoria, Andy"
       }
     ],
     "staysFull": [
@@ -3559,10 +3606,15 @@ const HANDBOOK_LOCALES = {
       },
       {
         "city": "Barcelona",
-        "start": "11-25",
+        "start": "11-24",
         "end": "12-02",
-        "nights": 7,
-        "note": "Última noite a 1 de dezembro."
+        "nights": 8,
+        "note": "Reserva GY-gEhM6KuE, 8 noites a partir de 24 de novembro. A entrada é a partir das 15:00 de dia 24, por isso o apartamento já está disponível quando chegarem na manhã de 25. Saída até às 11:00 de 2 de dezembro. Sete dias antes da chegada será enviado o check-in online: registar os dois hóspedes, pagar a taxa turística e confirmar a hora de chegada. As instruções de chegada só são enviadas depois de concluídos todos os passos.",
+        "hotel": "Enjoy Apartments · Joan Miro 5",
+        "status": "confirmed",
+        "amount": 1214,
+        "currency": "EUR",
+        "guests": "Victoria, Andy"
       }
     ],
     "cancelledStaysShort": [

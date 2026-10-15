@@ -26,14 +26,14 @@ const DAYS = [
 ['11-22','托雷多','托雷多老城、山谷觀景台','09:15 Madrid Puerta de Atocha 出發|09:49 抵達 Toledo|10:00 轉乘市區交通，方案待選|10:15 托雷多城堡|12:00 老城區|13:00 午餐|14:00 托雷多主教座堂|14:30 猶太區|15:30 山谷觀景台|19:00 晚餐|20:25 Toledo 出發|20:59 回到馬德里','來回火車已訂，托雷多市區交通待選。'],
 ['11-23','馬德里','麗池公園、普拉多博物館','09:00 麗池公園 El Retiro|10:00 水晶宮周邊|13:00 午餐|14:30 薩拉曼卡區購物|16:00 提早晚餐|17:15 普拉多博物館','水晶宮開放狀態待確認。普拉多預計於免費時段參觀，尚未預約。'],
 ['11-24','馬德里','馬德里自由活動','09:00 補景點、休息|13:00 午餐|14:30 購物|19:00 晚餐|20:30 整理行李','隔天搭早班高鐵往巴塞隆納。'],
-['11-25','巴塞隆納','巴塞隆納會合、哥德區','08:27 Andy：Madrid Puerta de Atocha 出發|09:10 Victoria：抵達 BCN|11:44 Andy：抵達 Barcelona Sants|12:30 住宿放行李、會合|14:00 哥德區 Gothic Quarter|15:00 巴塞隆納主教座堂|16:00 蘭布拉大道|16:30 博奎利亞市場|19:00 晚餐','Andy 抵達 Sants 車站；Victoria 抵達 BCN 機場。會合地點、接駁與住宿待確認。'],
+['11-25','巴塞隆納','巴塞隆納會合、哥德區','08:27 Andy：Madrid Puerta de Atocha 出發|09:10 Victoria：抵達 BCN|11:44 Andy：抵達 Barcelona Sants|12:30 入住住宿、會合|14:00 哥德區 Gothic Quarter|15:00 巴塞隆納主教座堂|16:00 蘭布拉大道|16:30 博奎利亞市場|19:00 晚餐','Andy 抵達 Sants 車站；Victoria 抵達 BCN 機場。住宿 Enjoy Apartments（Joan Miro 5）已確認，自 11/24 起訂，抵達即可進房；會合地點與接駁待確認。'],
 ['11-26','巴塞隆納','聖家堂、聖保羅醫院、巴特婁之家','上午 待安排|13:30 聖家堂，擬入場|14:30 聖家堂登塔，擬時段|下午 聖保羅醫院，待調整|16:00 巴特婁之家，擬時段|傍晚 格拉西亞大道|20:30 晚餐','14:30 登塔與聖保羅醫院時間重疊；當日景點時段暫定，訂票待確認。'],
 ['11-27','巴塞隆納','奎爾公園、卡梅爾山','09:00 奎爾公園 Park Güell|13:00 午餐|14:30 格拉西亞區 Gràcia|17:00 卡梅爾山碉堡觀景台|19:00 晚餐','奎爾公園待訂票，觀景台開放時段待確認。'],
 ['11-28','巴塞隆納','米拉之家、蒙特惠奇山','09:00 米拉之家 Casa Milà|13:00 午餐|14:30 蒙特惠奇山|19:00 晚餐|晚上 魔法噴泉，視開放公告','米拉之家購票狀態、魔法噴泉演出時間待確認。'],
 ['11-29','巴塞隆納','海邊、老城、自由活動','09:00 自由活動、海邊、老城、美食或洗衣|13:00 午餐|19:00 晚餐','週日店家營業時間待查。'],
 ['11-30','巴塞隆納','巴塞隆納自由活動','09:00 自由安排|白天 可作巴特婁之家或米拉之家調整備用日|13:00 午餐|19:00 晚餐','11/26 部分景點的備用日，票券時段待確認。'],
 ['12-01','巴塞隆納','購物、伴手禮、整理行李','09:00 最後購物|11:00 超市、伴手禮|13:00 午餐|14:30 回住宿整理行李|19:00 晚餐|21:00 早點休息','隔日返程，機場交通待確認。'],
-['12-02','返程','巴塞隆納 → 杜哈','11:30 Andy 離開住宿，原訂計畫|12:30 Andy 前往 BCN 機場，原訂計畫|15:20 Andy：BCN 起飛往杜哈|23:20 Andy：抵達 DOH','Andy 離宿與機場接駁時間待確認；航班時間為當地時間。'],
+['12-02','返程','巴塞隆納 → 杜哈','11:00 退房；行李可免費寄放 Enjoy Apartments 辦公室（平日）|12:30 Andy 前往 BCN 機場，原訂計畫|15:20 Andy：BCN 起飛往杜哈|23:20 Andy：抵達 DOH','12/02 為週三，可使用辦公室的平日免費行李寄放。Andy 機場接駁時間待確認；航班時間為當地時間。'],
 ['12-03','返程','回到高雄','02:00 杜哈 DOH 起飛|13:05 抵達胡志明市 SGN|17:45 SGN 起飛|21:45 抵達高雄 KHH','行李直掛與轉機入境安排待確認。']
 ];
 const TRAINS = [
@@ -98,7 +98,8 @@ const BUDGET = [
  {id:'granadaStay',category:'stays',person:'andy',stay:{full:4},note:'budgetStayPendingNote',status:'pending',amount:null,currency:'EUR'},
  {id:'malagaStay',category:'stays',person:'andy',stay:{full:5},note:'budgetStayPendingNote',status:'pending',amount:null,currency:'EUR'},
  {id:'madridStay',category:'stays',person:'andy',stay:{full:6},note:'budgetStayPendingNote',status:'pending',amount:null,currency:'EUR'},
- {id:'barcelonaStay',category:'stays',person:'both',stay:{short:3,full:7},note:'budgetStayPendingNote',status:'pending',amount:null,currency:'EUR'},
+ {id:'barcelonaStay',category:'stays',person:'both',stay:{short:3,full:7},note:'budgetEnjoyNote',status:'paid',amount:1214,currency:'EUR'},
+ {id:'bcnTouristTax',category:'stays',person:'both',start:'11-24',end:'12-02',label:'budgetBcnTouristTax',note:'budgetBcnTouristTaxNote',status:'due',amount:146.3,currency:'EUR'},
  {id:'cpIcVictoria',category:'transport',person:'victoria',train:1,note:'budgetOwnTicketNote',status:'booked',amount:null,currency:'EUR'},
  {id:'cpIcAndy',category:'transport',person:'andy',train:1,note:'budgetOwnTicketNote',status:'booked',amount:null,currency:'EUR'},
  {id:'cpAlfa',category:'transport',person:'victoria',train:2,note:'budgetCpAlfaNote',status:'booked',amount:null,currency:'EUR'},
